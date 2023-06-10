@@ -1,4 +1,6 @@
-﻿using GameHub.MVC.Models;
+﻿using GameHub.Application.Tournament.Queries.GetAllTournaments;
+using GameHub.MVC.Models;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -7,15 +9,18 @@ namespace GameHub.MVC.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly IMediator _mediator;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IMediator mediator)
         {
             _logger = logger;
+            _mediator = mediator;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            var tournaments = await _mediator.Send(new GetAllTournamentsQuery());
+            return View(tournaments);
         }
 
         public IActionResult Privacy()

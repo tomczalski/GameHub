@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using GameHub.Domain.Entities;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,7 @@ namespace GameHub.Infrastructure.Persistance
         {
 
         }
+        public DbSet<Tournament> Tournaments { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder builder)

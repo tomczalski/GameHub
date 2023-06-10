@@ -1,8 +1,27 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model IEnumerable<GameHub.Application.Tournament.TournamentDto>
+
+@{
+    ViewData["Title"] = "Aktualne turnieje";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<h1>Turnieje</h1>
+
+<p>
+    <a asp-controller="Tournament" asp-action="Create" class="btn btn-secondary">Dodaj nowy</a>
+</p>
+<div class="row">
+@foreach (var item in Model) 
+{
+        <div class="card m-3" style="width: 18rem;">           
+            <div class="card-body">
+                <h5 class="card-title">@item.Name</h5>
+                <h6 class="card-subtitle mb-2 text-muted">@item.Game</h6>
+                <p class="card-text">@item.Description</p>
+                <a class="btn btn-primary" asp-controller="Tournament" asp-action="Details" asp-route-encodedName="@item.EncodedName">Szczegóły</a>
+                
+                
+            </div>
+        </div>
+}
 </div>
+  
