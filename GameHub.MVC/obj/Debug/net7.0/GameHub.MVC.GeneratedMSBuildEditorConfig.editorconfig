@@ -24,6 +24,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/tomcz/source/repos/GameHub.MVC/GameHub.MVC/Views/Home/NoAccess.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxOb0FjY2Vzcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/tomcz/source/repos/GameHub.MVC/GameHub.MVC/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -46,6 +50,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/tomcz/source/repos/GameHub.MVC/GameHub.MVC/Views/Tournament/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG91cm5hbWVudFxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tomcz/source/repos/GameHub.MVC/GameHub.MVC/Views/Tournament/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG91cm5hbWVudFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/tomcz/source/repos/GameHub.MVC/GameHub.MVC/Views/_ViewImports.cshtml]

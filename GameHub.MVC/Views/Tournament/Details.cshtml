@@ -55,6 +55,10 @@
     </dl>
 </div>
 <div>
-    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @if (Model.IsEditable)
+    {
+        <a class="btn btn-secondary" asp-controller="Tournament" asp-action="Edit" asp-route-encodedName="@Model.EncodedName">Edit</a>
+    }
+    |
     <a asp-controller="Home" asp-action="Index">Powrót</a>
 </div>

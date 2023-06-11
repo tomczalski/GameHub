@@ -25,9 +25,16 @@ namespace GameHub.Infrastructure.Repositories
             await _dbContext.SaveChangesAsync();
         }
 
+        public async Task Edit()
+        {
+            await _dbContext.SaveChangesAsync();
+        }
+
         public async Task<IEnumerable<Tournament>> GetAll() => await _dbContext.Tournaments.ToListAsync();
 
         public async Task<Tournament> GetByEncodedName(string encodedName) =>await _dbContext.Tournaments.FirstAsync(c => c.EncodedName == encodedName);
+
+
         
     }
 }

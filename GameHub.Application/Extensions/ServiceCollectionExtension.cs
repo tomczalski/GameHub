@@ -1,5 +1,7 @@
-﻿using FluentValidation;
+﻿using AutoMapper;
+using FluentValidation;
 using FluentValidation.AspNetCore;
+using GameHub.Application.ApplicationUser;
 using GameHub.Application.Mappings;
 using GameHub.Application.Tournament.Commands.CreateTournament;
 using GameHub.Application.Tournament.Commands.Tournament;
@@ -18,8 +20,17 @@ namespace GameHub.Application.Extensions
         public static void AddApplication(this IServiceCollection services)
         {
             services.AddMediatR(typeof(CreateTournamentCommand));
-            services.AddAutoMapper(typeof(TournamentMappingProfile));
+
+            services.AddScoped(provider => new MapperConfiguration(cfg =>
+            {
+                var scope = provider.CreateScope();
+                var userContext = scope.ServiceProvider.GetRequiredService<IUserContext>();
+                cfg.AddProfile(new TournamentMappingProfile(userContext));
+            }).CreateMapper()
+            );
+
             services.AddValidatorsFromAssemblyContaining<CreateTournamentCommandValidator>().AddFluentValidationAutoValidation().AddFluentValidationClientsideAdapters();
+            services.AddScoped<IUserContext, UserContext>();
         }
     }
 }

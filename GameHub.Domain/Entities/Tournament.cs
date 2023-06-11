@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Identity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,9 @@ namespace GameHub.Domain.Entities
         public string? Prize { get; set; }
         public string EncodedName { get; private set; } = default!;
         public int NumberOfTeams { get; set; }
+
+        public string? CreatedById { get; set; }
+        public IdentityUser? CreatedBy { get; set; }
 
         public void EncodeName() => EncodedName = Name.ToLower().Replace(" ", "-");
     }

@@ -19,7 +19,8 @@ namespace GameHub.Infrastructure.Extensions
         {
             services.AddDbContext<GameHubDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("GameHub")));
 
-            services.AddDefaultIdentity<IdentityUser>().AddEntityFrameworkStores<GameHubDbContext>();
+            services.AddDefaultIdentity<IdentityUser>().AddRoles<IdentityRole>().AddEntityFrameworkStores<GameHubDbContext>();
+
             services.AddScoped<ITournamentRepository, TournamentRepository>();
 
 

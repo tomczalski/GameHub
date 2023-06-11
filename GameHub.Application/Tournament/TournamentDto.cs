@@ -16,5 +16,6 @@ namespace GameHub.Application.Tournament
         public string? Prize { get; set; }
         public string? EncodedName { get; set; }
         public int NumberOfTeams { get; set; }
+        public bool IsEditable { get; set; }
     }
 }
