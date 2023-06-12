@@ -2,6 +2,7 @@
 using GameHub.Application.Tournament.Commands.EditTournament;
 using GameHub.Application.Tournament.Commands.Tournament;
 using GameHub.Application.Tournament.Queries.GetTournamentByEncodedName;
+using GameHub.MVC.Extensions;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -34,6 +35,7 @@ namespace GameHub.MVC.Controllers
                 return View(command);
             }
             await _mediator.Send(command);
+            this.SetNotification("success", $"Utworzono turniej: {command.Name}");
             return RedirectToAction("Index", "Home");
         }
         

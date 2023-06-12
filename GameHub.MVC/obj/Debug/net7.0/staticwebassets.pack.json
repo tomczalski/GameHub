@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.MVC\\wwwroot\\jpgs\\logo.jpg",
+      "PackagePath": "staticwebassets\\jpgs\\logo.jpg"
+    },
+    {
       "Id": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.MVC\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
