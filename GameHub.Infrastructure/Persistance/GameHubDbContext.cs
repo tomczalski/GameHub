@@ -16,6 +16,7 @@ namespace GameHub.Infrastructure.Persistance
 
         }
         public DbSet<Tournament> Tournaments { get; set; }
+        public DbSet<TournamentGame> TournamentGames { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder builder)

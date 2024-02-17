@@ -4,14 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GameHub.Domain.Entities
+namespace GameHub.Application.Tournament
 {
-    public class TournamentGame
+    public class TournamentGameDto
     {
         public int Id { get; set; }
         public string? GameName { get; set; }
         public int MaxPlayers { get; set; }
-        public ICollection<Tournament> Tournaments { get; set; }
-        
     }
 }

@@ -1,11 +1,14 @@
 ﻿using AutoMapper;
+using GameHub.Application.Tournament;
 using GameHub.Application.Tournament.Commands.EditTournament;
 using GameHub.Application.Tournament.Commands.Tournament;
+using GameHub.Application.Tournament.Queries.GetAllGames;
 using GameHub.Application.Tournament.Queries.GetTournamentByEncodedName;
 using GameHub.MVC.Extensions;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Runtime.InteropServices;
 
 namespace GameHub.MVC.Controllers
@@ -21,10 +24,23 @@ namespace GameHub.MVC.Controllers
             _mapper = mapper;
         }
         [Authorize]
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
-     
-            return View();
+            var gamesOption = await _mediator.Send(new GetAllGamesQuery());
+            var selectGameOptions = new List<GameSelectModel>();
+            foreach (var item in gamesOption)
+            {
+                var selectGameOption = new GameSelectModel()
+                {
+                    Id = item.Id,
+                    Text = item.GameName,
+                };
+                selectGameOptions.Add(selectGameOption);
+            }
+
+           // ViewBag.SelectGameOptions = selectGameOptions;
+
+            return View(selectGameOptions);
         }
         [HttpPost]
         [Authorize]

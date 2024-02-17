@@ -11,6 +11,7 @@ namespace GameHub.Domain.Interfaces
     {
         Task Create(Tournament tournament);
         Task<IEnumerable<Tournament>> GetAll();
+        Task<IEnumerable<TournamentGame>> GetAllGames();
         Task<Tournament>GetByEncodedName(string encodedName);
         Task Edit();
     }

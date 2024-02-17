@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using GameHub.Application.ApplicationUser;
 using GameHub.Application.Tournament.Commands.Tournament;
+using GameHub.Domain.Entities;
 using GameHub.Domain.Interfaces;
 using MediatR;
 using System;
@@ -27,6 +28,7 @@ namespace GameHub.Application.Tournament.Commands.CreateTournament
         public async Task<Unit> Handle(CreateTournamentCommand request, CancellationToken cancellationToken)
         {
             var tournament = _mapper.Map<Domain.Entities.Tournament>(request);
+         
             tournament.EncodeName();
 
             tournament.CreatedById = _userContext.GetCurrentUser().Id;

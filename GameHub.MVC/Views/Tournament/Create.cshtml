@@ -15,10 +15,17 @@
                 <input asp-for="Name" class="form-control" />
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
-            <div class="form-group">
+           <!-- <div class="form-group">
                 <label asp-for="Game" class="control-label">Gra</label>
                 <input asp-for="Game" class="form-control" />
                 <span asp-validation-for="Game" class="text-danger"></span>
+            </div>-->
+            <div>
+                <!--@Html.DropDownList("GameId", (IEnumerable<SelectListItem>)ViewBag.SelectGameOptions, "Wybierz opcję")-->
+                @using (Html.BeginForm())
+                    {
+                @Html.LabelFor(selectGameOptions=>selectGameOption),
+                    }
             </div>
             <div class="form-group">
                 <label asp-for="Description" class="control-label">Opis</label>
