@@ -12,7 +12,7 @@ namespace GameHub.Domain.Entities
         public int Id { get; set; }
         public string Name { get; set; } = default!;
         public int GameId { get; set; }
-        public TournamentGame Game { get; set; } = new TournamentGame();
+        public TournamentGame Game { get; set; }
         public string? Description { get; set; }
         public DateTime StartDate { get; set; }
         public string? Prize { get; set; }

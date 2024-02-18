@@ -27,34 +27,36 @@ namespace GameHub.MVC.Controllers
         public async Task<IActionResult> Create()
         {
             var gamesOption = await _mediator.Send(new GetAllGamesQuery());
-            var selectGameOptions = new List<GameSelectModel>();
-            foreach (var item in gamesOption)
+            ViewBag.GamesSelectList = gamesOption.Select(game => new SelectListItem
             {
-                var selectGameOption = new GameSelectModel()
-                {
-                    Id = item.Id,
-                    Text = item.GameName,
-                };
-                selectGameOptions.Add(selectGameOption);
-            }
+                Value = game.Id.ToString(),
+                Text = game.GameName
+            }).ToList();
 
-           // ViewBag.SelectGameOptions = selectGameOptions;
+            // ViewBag.SelectGameOptions = selectGameOptions;
 
-            return View(selectGameOptions);
+            return View();
         }
         [HttpPost]
         [Authorize]
-        public async Task<IActionResult> Create(CreateTournamentCommand command) 
+        public async Task<IActionResult> Create(CreateTournamentCommand command)
         {
+            ModelState.Remove("Game.Tournaments");
             if (!ModelState.IsValid)
             {
+                var gamesOption = await _mediator.Send(new GetAllGamesQuery());
+                ViewBag.GamesSelectList = gamesOption.Select(game => new SelectListItem
+                {
+                    Value = game.Id.ToString(),
+                    Text = game.GameName
+                }).ToList();
                 return View(command);
             }
             await _mediator.Send(command);
             this.SetNotification("success", $"Utworzono turniej: {command.Name}");
             return RedirectToAction("Index", "Home");
         }
-        
+
         [Route("Tournament/{encodedName}/Details")]
         public async Task<IActionResult> Details(string encodedName)
         {

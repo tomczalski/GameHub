@@ -27,15 +27,27 @@ namespace GameHub.Application.Tournament.Commands.CreateTournament
         }
         public async Task<Unit> Handle(CreateTournamentCommand request, CancellationToken cancellationToken)
         {
-            var tournament = _mapper.Map<Domain.Entities.Tournament>(request);
-         
-            tournament.EncodeName();
+            var tournament = MapToTornament(request);
 
             tournament.CreatedById = _userContext.GetCurrentUser().Id;
 
             await _tournamentRepository.Create(tournament);
 
             return Unit.Value;
+        }
+        private Domain.Entities.Tournament MapToTornament(CreateTournamentCommand request)
+        {
+            var tournament = new Domain.Entities.Tournament()
+            {
+                GameId = request.GameId,
+                Name = request.Name,
+                Prize = request.Prize,
+                StartDate = request.StartDate,
+                NumberOfTeams = request.NumberOfTeams,
+                Description = request.Description,
+            };
+            tournament.EncodeName();
+            return tournament;
         }
     }
 }

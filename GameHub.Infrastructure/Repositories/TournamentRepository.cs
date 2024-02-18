@@ -30,12 +30,12 @@ namespace GameHub.Infrastructure.Repositories
             await _dbContext.SaveChangesAsync();
         }
 
-        public async Task<IEnumerable<Tournament>> GetAll() => await _dbContext.Tournaments.ToListAsync();
+        public async Task<IEnumerable<Tournament>> GetAll() => await _dbContext.Tournaments.Include(x => x.Game).ToListAsync();
         public async Task<IEnumerable<TournamentGame>> GetAllGames() => await _dbContext.TournamentGames.ToListAsync();
 
-        public async Task<Tournament> GetByEncodedName(string encodedName) =>await _dbContext.Tournaments.FirstAsync(c => c.EncodedName == encodedName);
+        public async Task<Tournament> GetByEncodedName(string encodedName) => await _dbContext.Tournaments.Include(x => x.Game).FirstAsync(c => c.EncodedName == encodedName);
 
 
-        
+
     }
 }

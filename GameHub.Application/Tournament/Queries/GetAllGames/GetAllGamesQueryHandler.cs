@@ -29,11 +29,11 @@ namespace GameHub.Application.Tournament.Queries.GetAllGames
             foreach (var item in tournaments)
             {
                 turnamet.Add(new TournamentGameDto()
-                { 
+                {
                     Id = item.Id,
                     GameName = item.GameName,
                     MaxPlayers = item.MaxPlayers
-                }) ;
+                });
             }
             //var dtos = _mapper.Map<IEnumerable<TournamentGameDto>>(tournaments);
 
