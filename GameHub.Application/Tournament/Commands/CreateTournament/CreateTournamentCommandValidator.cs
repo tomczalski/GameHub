@@ -14,7 +14,7 @@ namespace GameHub.Application.Tournament.Commands.CreateTournament
         public CreateTournamentCommandValidator(ITournamentRepository repository)
         {
             RuleFor(c => c.Name).NotEmpty().MinimumLength(8).MaximumLength(32).WithMessage("Pole nie może byc puste!");
-            RuleFor(c => c.Game).NotEmpty().NotEmpty().WithMessage("Pole nie może byc puste!");
+            RuleFor(c => c.Game).NotEmpty().WithMessage("Pole nie może byc puste!");
         }
     }
 }

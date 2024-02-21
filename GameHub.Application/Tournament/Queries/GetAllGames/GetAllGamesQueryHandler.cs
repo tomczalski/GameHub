@@ -23,12 +23,14 @@ namespace GameHub.Application.Tournament.Queries.GetAllGames
         }
         public async Task<List<TournamentGameDto>> Handle(GetAllGamesQuery request, CancellationToken cancellationToken)
         {
+
+
             var tournaments = await _tournamentRepository.GetAllGames();
 
-            var turnamet = new List<TournamentGameDto>();
+            var tournamet = new List<TournamentGameDto>();
             foreach (var item in tournaments)
             {
-                turnamet.Add(new TournamentGameDto()
+                tournamet.Add(new TournamentGameDto()
                 {
                     Id = item.Id,
                     GameName = item.GameName,
@@ -37,7 +39,7 @@ namespace GameHub.Application.Tournament.Queries.GetAllGames
             }
             //var dtos = _mapper.Map<IEnumerable<TournamentGameDto>>(tournaments);
 
-            return turnamet;
+            return tournamet;
         }
 
 

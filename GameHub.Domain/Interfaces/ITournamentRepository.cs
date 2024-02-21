@@ -12,7 +12,11 @@ namespace GameHub.Domain.Interfaces
         Task Create(Tournament tournament);
         Task<IEnumerable<Tournament>> GetAll();
         Task<IEnumerable<TournamentGame>> GetAllGames();
+        Task<IEnumerable<TournamentParticipant>> GetAllParticipants();
         Task<Tournament>GetByEncodedName(string encodedName);
         Task Edit();
+        Task AddParticipant(TournamentParticipant tournamentParticipant);
+        public bool IsUserAlreadyRegistered(string userId, int tournamentId);
+
     }
 }

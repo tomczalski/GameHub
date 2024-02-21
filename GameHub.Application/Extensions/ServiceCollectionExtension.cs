@@ -3,6 +3,7 @@ using FluentValidation;
 using FluentValidation.AspNetCore;
 using GameHub.Application.ApplicationUser;
 using GameHub.Application.Mappings;
+using GameHub.Application.Tournament.Commands.AddParticipant;
 using GameHub.Application.Tournament.Commands.CreateTournament;
 using GameHub.Application.Tournament.Commands.Tournament;
 using MediatR;
@@ -30,6 +31,7 @@ namespace GameHub.Application.Extensions
             );
 
             services.AddValidatorsFromAssemblyContaining<CreateTournamentCommandValidator>().AddFluentValidationAutoValidation().AddFluentValidationClientsideAdapters();
+            services.AddValidatorsFromAssemblyContaining<AddParticipantCommandValidator>().AddFluentValidationAutoValidation().AddFluentValidationClientsideAdapters();
             services.AddScoped<IUserContext, UserContext>();
         }
     }

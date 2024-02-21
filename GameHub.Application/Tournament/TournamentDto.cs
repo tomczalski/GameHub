@@ -9,6 +9,7 @@ namespace GameHub.Application.Tournament
 {
     public class TournamentDto
     {
+        public int Id { get; set; }
         public string Name { get; set; } = default!;
         public int GameId { get; set; }
         public TournamentGame Game { get; set; } = new TournamentGame();

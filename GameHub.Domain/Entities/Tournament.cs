@@ -21,6 +21,7 @@ namespace GameHub.Domain.Entities
 
         public string? CreatedById { get; set; }
         public IdentityUser? CreatedBy { get; set; }
+        public ICollection<TournamentParticipant>? Participants { get; set; }
 
         public void EncodeName() => EncodedName = Name.ToLower().Replace(" ", "-");
     }

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,7 @@ namespace GameHub.Application.ApplicationUser
     public interface IUserContext
     {
         CurrentUser? GetCurrentUser();
+        HttpContext GetHttpContext();
     }
 
     public class UserContext : IUserContext
@@ -41,5 +43,11 @@ namespace GameHub.Application.ApplicationUser
             return new CurrentUser(id, email);
 
         }
+        public HttpContext GetHttpContext()
+        {
+            return _httpContextAccessor.HttpContext;
+        }
+
+
     }
 }

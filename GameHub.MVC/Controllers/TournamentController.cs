@@ -1,10 +1,13 @@
 ﻿using AutoMapper;
 using GameHub.Application.Tournament;
+using GameHub.Application.Tournament.Commands.AddParticipant;
 using GameHub.Application.Tournament.Commands.EditTournament;
 using GameHub.Application.Tournament.Commands.Tournament;
 using GameHub.Application.Tournament.Queries.GetAllGames;
+using GameHub.Application.Tournament.Queries.GetAllTournamentParticipants;
 using GameHub.Application.Tournament.Queries.GetTournamentByEncodedName;
 using GameHub.MVC.Extensions;
+using GameHub.MVC.Models;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -56,12 +59,26 @@ namespace GameHub.MVC.Controllers
             this.SetNotification("success", $"Utworzono turniej: {command.Name}");
             return RedirectToAction("Index", "Home");
         }
-
+        [HttpPost]
+        public async Task<IActionResult> AddParticipant(AddParticipantCommand command, string EncodedName)
+        {
+            command.EncodedName = EncodedName;
+            await _mediator.Send(command);
+            return RedirectToAction("Index", "Home");
+        }
         [Route("Tournament/{encodedName}/Details")]
         public async Task<IActionResult> Details(string encodedName)
         {
-            var dto = await _mediator.Send(new GetTournamentByEncodedNameQuery(encodedName));
-            return View(dto);
+            var tournamentDto = await _mediator.Send(new GetTournamentByEncodedNameQuery(encodedName));
+            var participantsDto = await _mediator.Send(new GetAllTournamentParticipantsQuery(encodedName));
+
+            var model = new TournamentDetailsViewModel
+            {
+                Tournament = tournamentDto,
+                Participants = participantsDto
+            };
+
+            return View(model);
         }
         
         [Route("Tournament/{encodedName}/Edit")]

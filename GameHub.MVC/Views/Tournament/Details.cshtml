@@ -1,4 +1,4 @@
-﻿@model GameHub.Application.Tournament.TournamentDto
+﻿@model TournamentDetailsViewModel
 
 @{
     ViewData["Title"] = "Szczegóły";
@@ -7,58 +7,75 @@
 <h1>Szczegóły turnieju</h1>
 
 <div>
-
+    <input type="hidden" name="EncodedName" value="@Model.Tournament.EncodedName" />
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Name)
+            @Html.DisplayNameFor(model => model.Tournament.Name)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Name)
+            @Html.DisplayFor(model => model.Tournament.Name)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Game)
+            @Html.DisplayNameFor(model => model.Tournament.Game)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Game.GameName)
+            @Html.DisplayFor(model => model.Tournament.Game.GameName)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Description)
+            @Html.DisplayNameFor(model => model.Tournament.Description)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Description)
+            @Html.DisplayFor(model => model.Tournament.Description)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.StartDate)
+            @Html.DisplayNameFor(model => model.Tournament.StartDate)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.StartDate)
+            @Html.DisplayFor(model => model.Tournament.StartDate)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Prize)
+            @Html.DisplayNameFor(model => model.Tournament.Prize)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Prize)
+            @Html.DisplayFor(model => model.Tournament.Prize)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.EncodedName)
+            @Html.DisplayNameFor(model => model.Tournament.EncodedName)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.EncodedName)
+            @Html.DisplayFor(model => model.Tournament.EncodedName)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.NumberOfTeams)
+            @Html.DisplayNameFor(model => model.Tournament.NumberOfTeams)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.NumberOfTeams)
+            @Html.DisplayFor(model => model.Tournament.NumberOfTeams)
         </dd>
     </dl>
 </div>
 <div>
-    @if (Model.IsEditable)
+    @if (Model.Tournament.IsEditable)
     {
-        <a class="btn btn-secondary" asp-controller="Tournament" asp-action="Edit" asp-route-encodedName="@Model.EncodedName">Edit</a>
+        <a class="btn btn-secondary" asp-controller="Tournament" asp-action="Edit" asp-route-encodedName="@Model.Tournament.EncodedName">Edytuj</a>
+
+        <form asp-controller="Tournament" asp-action="AddParticipant" method="post">
+            <input type="hidden" name="EncodedName" value="@Model.Tournament.EncodedName" />
+            <button type="submit" class="btn btn-primary">Dołącz</button>
+        </form>
     }
     |
     <a asp-controller="Home" asp-action="Index">Powrót</a>
+</div>
+
+<div>
+
+    <h2>Lista uczestników:</h2>
+    <input type="hidden" name="EncodedName" value="@Model.Tournament.EncodedName" />
+    <ul>
+        @foreach (var participant in Model.Participants)
+        {
+            <li>@participant.UserId - @participant.TournamentId</li>
+        }
+    </ul>
 </div>
