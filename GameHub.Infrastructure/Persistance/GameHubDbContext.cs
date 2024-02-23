@@ -1,4 +1,5 @@
-﻿using GameHub.Domain.Entities;
+﻿using GameHub.Application.Interface;
+using GameHub.Domain.Entities;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace GameHub.Infrastructure.Persistance
 {
-    public class GameHubDbContext : IdentityDbContext
+    public class GameHubDbContext : IdentityDbContext, IGameHubDbContext
     {
         public GameHubDbContext(DbContextOptions<GameHubDbContext> options) : base(options) 
         {

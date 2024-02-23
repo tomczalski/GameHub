@@ -61,7 +61,10 @@
 
         <form asp-controller="Tournament" asp-action="AddParticipant" method="post">
             <input type="hidden" name="EncodedName" value="@Model.Tournament.EncodedName" />
+            <input type="hidden" name="TournamentId" value="@Model.Tournament.Id" />
+            <input type="hidden" name="UserId" value="" />
             <button type="submit" class="btn btn-primary">Dołącz</button>
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         </form>
     }
     |

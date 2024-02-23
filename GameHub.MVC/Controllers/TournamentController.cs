@@ -60,11 +60,29 @@ namespace GameHub.MVC.Controllers
             return RedirectToAction("Index", "Home");
         }
         [HttpPost]
-        public async Task<IActionResult> AddParticipant(AddParticipantCommand command, string EncodedName)
+        public async Task<IActionResult> AddParticipant(AddParticipantCommand command, string encodedName)
         {
-            command.EncodedName = EncodedName;
+            ModelState.Remove("UserId");
+            if (!ModelState.IsValid)
+            {
+
+                var tournamentDto = await _mediator.Send(new GetTournamentByEncodedNameQuery(encodedName));
+                var participantsDto = await _mediator.Send(new GetAllTournamentParticipantsQuery(encodedName));
+
+                var model = new TournamentDetailsViewModel
+                {
+                    Tournament = tournamentDto,
+                    Participants = participantsDto
+                };
+
+
+                return View("Details", model);
+            }
+
+            command.EncodedName = encodedName;
             await _mediator.Send(command);
-            return RedirectToAction("Index", "Home");
+
+            return RedirectToAction("Details", new { encodedName = encodedName });
         }
         [Route("Tournament/{encodedName}/Details")]
         public async Task<IActionResult> Details(string encodedName)

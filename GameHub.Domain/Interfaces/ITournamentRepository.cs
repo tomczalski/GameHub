@@ -16,7 +16,7 @@ namespace GameHub.Domain.Interfaces
         Task<Tournament>GetByEncodedName(string encodedName);
         Task Edit();
         Task AddParticipant(TournamentParticipant tournamentParticipant);
-        public bool IsUserAlreadyRegistered(string userId, int tournamentId);
+        public bool IsUserAlreadyRegistered(int tournamentId);
 
     }
 }

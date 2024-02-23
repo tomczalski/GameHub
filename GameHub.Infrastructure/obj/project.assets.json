@@ -1412,6 +1412,7 @@
           "FluentValidation.AspNetCore": "11.3.0",
           "GameHub.Domain": "1.0.0",
           "MediatR.Extensions.Microsoft.DependencyInjection": "11.1.0",
+          "Microsoft.EntityFrameworkCore": "7.0.5",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0"
         },
         "compile": {

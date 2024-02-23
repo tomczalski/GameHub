@@ -12,14 +12,22 @@ namespace GameHub.Application.Tournament.Commands.AddParticipant
 {
     public class AddParticipantCommandValidator : AbstractValidator<AddParticipantCommand>
     {
-        public AddParticipantCommandValidator(ITournamentRepository _repository, UserContext userContext)
+        public AddParticipantCommandValidator(ITournamentRepository _repository)
         {
-            RuleFor(c => c.UserId).NotEmpty().WithMessage("Pole nie może byc puste!");
+
             RuleFor(c => c.TournamentId).NotEmpty().WithMessage("Pole nie może byc puste!");
 
-           
-            RuleFor(c => new { c.UserId, c.TournamentId }).Must((command, ids) => _repository.IsUserAlreadyRegistered(userContext.GetCurrentUser().Id, ids.TournamentId))
-           .WithMessage("Użytkownik jest już zapisany do tego turnieju.");
+            RuleFor(x => x)
+                .Custom((command, context) =>
+                {
+                    var alreadySignedUp = _repository.IsUserAlreadyRegistered(command.TournamentId);
+
+                    if (alreadySignedUp)
+                    {
+                        context.AddFailure("Użytkownik jest już zapisany do tego turnieju.");
+                    }
+                });
+
 
         }
     }

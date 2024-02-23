@@ -1,4 +1,5 @@
-﻿using GameHub.Domain.Interfaces;
+﻿using GameHub.Application.Interface;
+using GameHub.Domain.Interfaces;
 using GameHub.Infrastructure.Persistance;
 using GameHub.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Identity;
@@ -23,6 +24,7 @@ namespace GameHub.Infrastructure.Extensions
 
             services.AddScoped<ITournamentRepository, TournamentRepository>();
 
+            services.AddScoped<IGameHubDbContext, GameHubDbContext>();
 
         }
     }
