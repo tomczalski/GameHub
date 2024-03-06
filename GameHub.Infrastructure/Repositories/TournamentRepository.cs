@@ -24,10 +24,11 @@ namespace GameHub.Infrastructure.Repositories
             _dbContext = dbContext;
         }
 
-        public async Task Create(Tournament tournament)
+        public async Task<int> Create(Tournament tournament)
         {
-            _dbContext.Tournaments.Add(tournament);
+            var tournamentId = _dbContext.Tournaments.Add(tournament);
             await _dbContext.SaveChangesAsync();
+            return tournamentId.Entity.Id;
         }
 
         public async Task Edit()
@@ -40,11 +41,16 @@ namespace GameHub.Infrastructure.Repositories
             _dbContext.TournamentParticipants.Add(tournamentParticipant);
             await _dbContext.SaveChangesAsync();
         }
-
+        public async Task AddTeam(Team team)
+        {
+            _dbContext.Teams.Add(team);
+            await _dbContext.SaveChangesAsync();
+        }
         public async Task<IEnumerable<Tournament>> GetAll() => await _dbContext.Tournaments.Include(x => x.Game).ToListAsync();
         public async Task<IEnumerable<TournamentGame>> GetAllGames() => await _dbContext.TournamentGames.ToListAsync();
         public async Task<Tournament> GetByEncodedName(string encodedName) => await _dbContext.Tournaments.Include(x => x.Game).FirstAsync(c => c.EncodedName == encodedName);
         public async Task<IEnumerable<TournamentParticipant>> GetAllParticipants() => await _dbContext.TournamentParticipants.ToArrayAsync();
+        public async Task<IEnumerable<Team>> GetAllTeams() => await _dbContext.Teams.ToArrayAsync();
         public bool IsUserAlreadyRegistered(int tournamentId)
         {
             var userId = _userContext.GetCurrentUser().Id;
@@ -53,5 +59,9 @@ namespace GameHub.Infrastructure.Repositories
             return existingParticipant != null;
         }
 
+        public async Task<TournamentGame> GetGameById(int gameId)
+        {
+            return await _dbContext.TournamentGames.FirstOrDefaultAsync(c => c.Id == gameId);
+        }
     }
 }

@@ -9,7 +9,8 @@ namespace GameHub.Domain.Interfaces
 {
     public interface ITournamentRepository
     {
-        Task Create(Tournament tournament);
+        Task<int> Create(Tournament tournament);
+        Task AddTeam(Team team);
         Task<IEnumerable<Tournament>> GetAll();
         Task<IEnumerable<TournamentGame>> GetAllGames();
         Task<IEnumerable<TournamentParticipant>> GetAllParticipants();
@@ -17,6 +18,8 @@ namespace GameHub.Domain.Interfaces
         Task Edit();
         Task AddParticipant(TournamentParticipant tournamentParticipant);
         public bool IsUserAlreadyRegistered(int tournamentId);
+        Task<TournamentGame> GetGameById(int gameId);
+        Task<IEnumerable<Team>> GetAllTeams();
 
     }
 }

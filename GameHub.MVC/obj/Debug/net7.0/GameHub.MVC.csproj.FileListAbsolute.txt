@@ -413,7 +413,6 @@ C:\Users\tomcz\source\repos\GameHub.MVC\GameHub.MVC\obj\Debug\net7.0\staticwebas
 C:\Users\tomcz\source\repos\GameHub.MVC\GameHub.MVC\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\tomcz\source\repos\GameHub.MVC\GameHub.MVC\obj\Debug\net7.0\scopedcss\bundle\GameHub.MVC.styles.css
 C:\Users\tomcz\source\repos\GameHub.MVC\GameHub.MVC\obj\Debug\net7.0\scopedcss\projectbundle\GameHub.MVC.bundle.scp.css
-C:\Users\tomcz\source\repos\GameHub.MVC\GameHub.MVC\obj\Debug\net7.0\GameHub.MVC.csproj.CopyComplete
 C:\Users\tomcz\source\repos\GameHub.MVC\GameHub.MVC\obj\Debug\net7.0\GameHub.MVC.dll
 C:\Users\tomcz\source\repos\GameHub.MVC\GameHub.MVC\obj\Debug\net7.0\refint\GameHub.MVC.dll
 C:\Users\tomcz\source\repos\GameHub.MVC\GameHub.MVC\obj\Debug\net7.0\GameHub.MVC.pdb
@@ -594,3 +593,5 @@ C:\Users\tomcz\source\repos\GameHub.MVC\GameHub.MVC\bin\Debug\net7.0\runtimes\un
 C:\Users\tomcz\source\repos\GameHub.MVC\GameHub.MVC\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 C:\Users\tomcz\source\repos\GameHub.MVC\GameHub.MVC\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\tomcz\source\repos\GameHub.MVC\GameHub.MVC\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\tomcz\source\repos\GameHub.MVC\GameHub.MVC\obj\Debug\net7.0\GameHub.MVC.sourcelink.json
+C:\Users\tomcz\source\repos\GameHub.MVC\GameHub.MVC\obj\Debug\net7.0\GameHub..1D532F36.Up2Date

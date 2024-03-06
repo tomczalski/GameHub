@@ -19,12 +19,17 @@ namespace GameHub.Infrastructure.Persistance
         public DbSet<Tournament> Tournaments { get; set; }
         public DbSet<TournamentGame> TournamentGames { get; set; }
         public DbSet<TournamentParticipant> TournamentParticipants { get; set; }
+        public DbSet<Team> Teams { get; set; }
+        public DbSet<Match> Matches { get; set; }
+        public DbSet<Round> Rounds { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            base.OnModelCreating(builder);
 
+            base.OnModelCreating(builder);
+            builder.Entity<Match>().HasOne<Team>(m => m.Team1).WithMany().HasForeignKey(m => m.Team1Id).OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<Match>().HasOne<Team>(m => m.Team2).WithMany().HasForeignKey(m => m.Team2Id).OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

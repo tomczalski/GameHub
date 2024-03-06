@@ -5,6 +5,7 @@ using GameHub.Application.Tournament.Commands.EditTournament;
 using GameHub.Application.Tournament.Commands.Tournament;
 using GameHub.Application.Tournament.Queries.GetAllGames;
 using GameHub.Application.Tournament.Queries.GetAllTournamentParticipants;
+using GameHub.Application.Tournament.Queries.GetAllTournamentTeams;
 using GameHub.Application.Tournament.Queries.GetTournamentByEncodedName;
 using GameHub.MVC.Extensions;
 using GameHub.MVC.Models;
@@ -63,16 +64,19 @@ namespace GameHub.MVC.Controllers
         public async Task<IActionResult> AddParticipant(AddParticipantCommand command, string encodedName)
         {
             ModelState.Remove("UserId");
+            ModelState.Remove("Username");
             if (!ModelState.IsValid)
             {
 
                 var tournamentDto = await _mediator.Send(new GetTournamentByEncodedNameQuery(encodedName));
                 var participantsDto = await _mediator.Send(new GetAllTournamentParticipantsQuery(encodedName));
+                var teamsDto = await _mediator.Send(new GetAllTournamentTeamsQuery(encodedName));
 
                 var model = new TournamentDetailsViewModel
                 {
                     Tournament = tournamentDto,
-                    Participants = participantsDto
+                    Participants = participantsDto,
+                    TournamentTeams = teamsDto
                 };
 
 
@@ -89,11 +93,13 @@ namespace GameHub.MVC.Controllers
         {
             var tournamentDto = await _mediator.Send(new GetTournamentByEncodedNameQuery(encodedName));
             var participantsDto = await _mediator.Send(new GetAllTournamentParticipantsQuery(encodedName));
+            var teamsDto = await _mediator.Send(new GetAllTournamentTeamsQuery(encodedName)); 
 
             var model = new TournamentDetailsViewModel
             {
                 Tournament = tournamentDto,
-                Participants = participantsDto
+                Participants = participantsDto,
+                TournamentTeams = teamsDto
             };
 
             return View(model);

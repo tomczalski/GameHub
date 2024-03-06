@@ -35,6 +35,7 @@ namespace GameHub.Application.Tournament.Queries.GetAllTournamentParticipants
                     participants.Add(new TournamentParticipantDto()
                     {
                         UserId = item.UserId,
+                        Username = item.Username,
                         TournamentId = item.TournamentId
                     });
                 }

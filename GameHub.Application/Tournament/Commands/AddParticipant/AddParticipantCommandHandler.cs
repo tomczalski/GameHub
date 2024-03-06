@@ -36,7 +36,9 @@ namespace GameHub.Application.Tournament.Commands.AddParticipant
 
             participant.UserId = user.Id;
             participant.TournamentId = tournamentId;
+            participant.Username = user.Email;
 
+            
             await _tournamentRepository.AddParticipant(participant);
             return Unit.Value;
         }
@@ -46,6 +48,7 @@ namespace GameHub.Application.Tournament.Commands.AddParticipant
             var participant = new Domain.Entities.TournamentParticipant()
             {
                 UserId = request.UserId,
+                Username = request.Username,
                 TournamentId = request.TournamentId,
             };
             return participant;

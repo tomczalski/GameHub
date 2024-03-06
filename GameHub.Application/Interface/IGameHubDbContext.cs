@@ -13,6 +13,9 @@ namespace GameHub.Application.Interface
         public DbSet<GameHub.Domain.Entities.Tournament> Tournaments { get; set; }
         public DbSet<TournamentGame> TournamentGames { get; set; }
         public DbSet<TournamentParticipant> TournamentParticipants { get; set; }
+        public DbSet<Team> Teams { get; set; }
+        public DbSet<Match> Matches { get; set; }
+        public DbSet<Round> Rounds { get; set; }
 
         Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken());
     }

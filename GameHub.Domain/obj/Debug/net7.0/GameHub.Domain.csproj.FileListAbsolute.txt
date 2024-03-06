@@ -10,3 +10,4 @@ C:\Users\tomcz\source\repos\GameHub.MVC\GameHub.Domain\obj\Debug\net7.0\GameHub.
 C:\Users\tomcz\source\repos\GameHub.MVC\GameHub.Domain\obj\Debug\net7.0\refint\GameHub.Domain.dll
 C:\Users\tomcz\source\repos\GameHub.MVC\GameHub.Domain\obj\Debug\net7.0\GameHub.Domain.pdb
 C:\Users\tomcz\source\repos\GameHub.MVC\GameHub.Domain\obj\Debug\net7.0\ref\GameHub.Domain.dll
+C:\Users\tomcz\source\repos\GameHub.MVC\GameHub.Domain\obj\Debug\net7.0\GameHub.Domain.sourcelink.json
