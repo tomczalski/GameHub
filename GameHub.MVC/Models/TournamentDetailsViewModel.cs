@@ -1,4 +1,5 @@
 ﻿using GameHub.Application.Tournament;
+using GameHub.Domain.Entities;
 
 namespace GameHub.MVC.Models
 {

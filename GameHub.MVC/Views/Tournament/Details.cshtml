@@ -79,7 +79,7 @@
             <ul>
                 @foreach (var participant in Model.Participants)
                 {
-                    <li>@participant.Username - @participant.TournamentId</li>
+                    <li>@participant.Username</li>
                 }
             </ul>
         </div>
@@ -96,18 +96,23 @@
                 <div class="card-body">
                     <!-- Przycisk do dołączania do drużyny -->
                     <form asp-controller="Tournament" asp-action="JoinTeam" method="post">
-                        <input type="hidden" name="TeamId" value="@team.Id" />
-                        <input type="hidden" name="UserId" value="" /> <!-- Tutaj możesz umieścić użytkownika, który chce dołączyć -->
+                        <input type="hidden" name="EncodedName" value="@Model.Tournament.EncodedName" />
+                        <input type="hidden" name="TournamentId" value="@Model.Tournament.Id" />
+                        <input type="hidden" name="tournamentTeamId" value="@team.Id" />
+                        <input type="hidden" name="UserId" value="" />
+                        <input type="hidden" name="Username" value="" />
                         <button type="submit" class="btn btn-primary">Dołącz do drużyny</button>
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                     </form>
 
                     <!-- Lista członków drużyny -->
                     <h5 class="card-title">Członkowie drużyny:</h5>
-                    <ul class="list-group">
-                        @* @foreach (var member in team.Members)
+                    <input type="hidden" name="tournamentTeamId" value="@team.Id" />
+                    <ul>
+                        @foreach (var member in team.Members)
                         {
-                            <li class="list-group-item">@member.UserName</li>
-                        } *@
+                            <li>@member</li>
+                        }
                     </ul>
                 </div>
             </div>

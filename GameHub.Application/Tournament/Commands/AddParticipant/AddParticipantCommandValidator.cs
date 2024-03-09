@@ -24,7 +24,7 @@ namespace GameHub.Application.Tournament.Commands.AddParticipant
 
                     if (alreadySignedUp)
                     {
-                        context.AddFailure("Użytkownik jest już zapisany do tego turnieju.");
+                        context.AddFailure("");
                     }
                 });
 

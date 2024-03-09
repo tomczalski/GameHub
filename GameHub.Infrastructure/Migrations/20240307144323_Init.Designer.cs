@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GameHub.Infrastructure.Migrations
 {
     [DbContext(typeof(GameHubDbContext))]
-    [Migration("20240306180125_Init")]
+    [Migration("20240307144323_Init")]
     partial class Init
     {
         /// <inheritdoc />
@@ -130,13 +130,17 @@ namespace GameHub.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<string>("Username")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
                     b.HasIndex("TeamId");
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("TeamMember");
+                    b.ToTable("TeamMembers");
                 });
 
             modelBuilder.Entity("GameHub.Domain.Entities.Tournament", b =>

@@ -12,5 +12,6 @@ namespace GameHub.Application.Tournament
         public string Name { get; set; }
         public int TeamSize { get; set; }
         public int TournamentId { get; set; }
+        public List<string> Members { get; set; }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using GameHub.Application.Tournament.Queries.GetAllTournaments;
+using GameHub.Domain.Entities;
 using GameHub.Domain.Interfaces;
 using MediatR;
 using System;
@@ -7,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace GameHub.Application.Tournament.Queries.GetAllTournamentTeams
 {
@@ -32,13 +34,31 @@ namespace GameHub.Application.Tournament.Queries.GetAllTournamentTeams
             {
                 if (item.TournamentId == tournament.Id)
                 {
-                    teamsList.Add(new TeamDto()
+                    var team = new TeamDto()
                     {
                         Id = item.Id,
                         Name = item.Name,
                         TeamSize = item.TeamSize,
-                        TournamentId = item.TournamentId
-                    });
+                        TournamentId = item.TournamentId,
+                        
+                    };
+                    //teamsList.Add(new TeamDto()
+                    //{
+                    //    Id = item.Id,
+                    //    Name = item.Name,
+                    //    TeamSize = item.TeamSize,
+                    //    TournamentId = item.TournamentId,
+
+                    //});
+                    team.Members = new List<string>();
+                    if (item.TeamMembers.Count() > 0)
+                    {
+                        foreach (var member in item.TeamMembers)
+                        {
+                            team.Members.Add(member.Username);
+                        }
+                    }
+                    teamsList.Add(team);
                 }
             }
             return teamsList;

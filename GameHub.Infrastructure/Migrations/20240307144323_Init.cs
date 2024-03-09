@@ -310,25 +310,26 @@ namespace GameHub.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "TeamMember",
+                name: "TeamMembers",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     UserId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Username = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     TeamId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_TeamMember", x => x.Id);
+                    table.PrimaryKey("PK_TeamMembers", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_TeamMember_AspNetUsers_UserId",
+                        name: "FK_TeamMembers_AspNetUsers_UserId",
                         column: x => x.UserId,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_TeamMember_Teams_TeamId",
+                        name: "FK_TeamMembers_Teams_TeamId",
                         column: x => x.TeamId,
                         principalTable: "Teams",
                         principalColumn: "Id",
@@ -395,13 +396,13 @@ namespace GameHub.Infrastructure.Migrations
                 column: "TournamentId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_TeamMember_TeamId",
-                table: "TeamMember",
+                name: "IX_TeamMembers_TeamId",
+                table: "TeamMembers",
                 column: "TeamId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_TeamMember_UserId",
-                table: "TeamMember",
+                name: "IX_TeamMembers_UserId",
+                table: "TeamMembers",
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
@@ -452,7 +453,7 @@ namespace GameHub.Infrastructure.Migrations
                 name: "Matches");
 
             migrationBuilder.DropTable(
-                name: "TeamMember");
+                name: "TeamMembers");
 
             migrationBuilder.DropTable(
                 name: "TournamentParticipants");

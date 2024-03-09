@@ -127,13 +127,17 @@ namespace GameHub.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<string>("Username")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
                     b.HasIndex("TeamId");
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("TeamMember");
+                    b.ToTable("TeamMembers");
                 });
 
             modelBuilder.Entity("GameHub.Domain.Entities.Tournament", b =>

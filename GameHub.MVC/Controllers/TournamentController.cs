@@ -2,11 +2,14 @@
 using GameHub.Application.Tournament;
 using GameHub.Application.Tournament.Commands.AddParticipant;
 using GameHub.Application.Tournament.Commands.EditTournament;
+using GameHub.Application.Tournament.Commands.JoinTeam;
 using GameHub.Application.Tournament.Commands.Tournament;
 using GameHub.Application.Tournament.Queries.GetAllGames;
+using GameHub.Application.Tournament.Queries.GetAllTeamMembers;
 using GameHub.Application.Tournament.Queries.GetAllTournamentParticipants;
 using GameHub.Application.Tournament.Queries.GetAllTournamentTeams;
 using GameHub.Application.Tournament.Queries.GetTournamentByEncodedName;
+using GameHub.Domain.Entities;
 using GameHub.MVC.Extensions;
 using GameHub.MVC.Models;
 using MediatR;
@@ -61,7 +64,7 @@ namespace GameHub.MVC.Controllers
             return RedirectToAction("Index", "Home");
         }
         [HttpPost]
-        public async Task<IActionResult> AddParticipant(AddParticipantCommand command, string encodedName)
+        public async Task<IActionResult> AddParticipant(AddParticipantCommand command, string encodedName, int tournamentTeamId)
         {
             ModelState.Remove("UserId");
             ModelState.Remove("Username");
@@ -76,18 +79,49 @@ namespace GameHub.MVC.Controllers
                 {
                     Tournament = tournamentDto,
                     Participants = participantsDto,
-                    TournamentTeams = teamsDto
+                    TournamentTeams = teamsDto,
                 };
 
-
+                this.SetNotification("error", $"Użytkownik jest już zapisany do tego turnieju!");
                 return View("Details", model);
             }
 
             command.EncodedName = encodedName;
             await _mediator.Send(command);
-
+            this.SetNotification("success", $"Dołączono do turnieju");
             return RedirectToAction("Details", new { encodedName = encodedName });
         }
+
+        [HttpPost]
+        public async Task<IActionResult> JoinTeam(JoinTeamCommand command, string encodedName, int tournamentTeamId)
+        {
+            ModelState.Remove("UserId");
+            ModelState.Remove("TeamId");
+            ModelState.Remove("Username");
+            if (!ModelState.IsValid)
+            {
+
+                var tournamentDto = await _mediator.Send(new GetTournamentByEncodedNameQuery(encodedName));
+                var participantsDto = await _mediator.Send(new GetAllTournamentParticipantsQuery(encodedName));
+                var teamsDto = await _mediator.Send(new GetAllTournamentTeamsQuery(encodedName));
+                var model = new TournamentDetailsViewModel
+                {
+                    Tournament = tournamentDto,
+                    Participants = participantsDto,
+                    TournamentTeams = teamsDto,
+                };
+
+                this.SetNotification("error", $"Użytkownik jest już zapisany do tego turnieju!");
+                return View("Details", model);
+            }
+
+            command.EncodedName = encodedName;
+            command.TournamentTeamId = tournamentTeamId;
+            await _mediator.Send(command);
+            this.SetNotification("success", $"Dołączono do turnieju");
+            return RedirectToAction("Details", new { encodedName = encodedName });
+        }
+
         [Route("Tournament/{encodedName}/Details")]
         public async Task<IActionResult> Details(string encodedName)
         {
@@ -99,7 +133,7 @@ namespace GameHub.MVC.Controllers
             {
                 Tournament = tournamentDto,
                 Participants = participantsDto,
-                TournamentTeams = teamsDto
+                TournamentTeams = teamsDto,
             };
 
             return View(model);
