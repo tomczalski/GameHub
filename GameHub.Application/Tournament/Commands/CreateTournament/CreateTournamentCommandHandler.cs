@@ -55,6 +55,7 @@ namespace GameHub.Application.Tournament.Commands.CreateTournament
                 Description = request.Description,
             };
             tournament.EncodeName();
+            tournament.CalculateMaxRounds();
             return tournament;
         }
     }

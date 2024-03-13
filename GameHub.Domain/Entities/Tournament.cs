@@ -31,7 +31,7 @@ namespace GameHub.Domain.Entities
         public IdentityUser? CreatedBy { get; set; }
         public ICollection<TournamentParticipant>? Participants { get; set; }
         public ICollection<Team>? Teams { get; set; }
-        public TournamentState TournamentState { get; private set; } = TournamentState.Awaiting;
+        public TournamentState TournamentState { get; set; } = TournamentState.Awaiting;
 
         public void EncodeName() => EncodedName = Name.ToLower().Replace(" ", "-");
         public void CalculateMaxRounds() 
@@ -39,13 +39,6 @@ namespace GameHub.Domain.Entities
             double logBase2 = Math.Log(NumberOfTeams, 2);
             int rounds = (int)Math.Ceiling(logBase2);
             MaxRounds = rounds;
-        }
-        public void UpdateTournamentState()
-        {
-            if (Teams != null && Teams.Count >= NumberOfTeams)
-            {
-                TournamentState = TournamentState.Started;
-            }
         }
     }
 }

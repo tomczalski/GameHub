@@ -19,5 +19,6 @@ namespace GameHub.Application.Tournament
         public string? EncodedName { get; set; }
         public int NumberOfTeams { get; set; }
         public bool IsEditable { get; set; }
+        public TournamentState TournamentState { get; set; }
     }
 }

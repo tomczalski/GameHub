@@ -15,12 +15,18 @@ namespace GameHub.Domain.Interfaces
         Task<IEnumerable<TournamentGame>> GetAllGames();
         Task<IEnumerable<TournamentParticipant>> GetAllParticipants();
         Task<IEnumerable<TeamMember>> GetAllTeamMembers();
+        Task<IEnumerable<Match>> GetAllMatches();
         Task<Tournament>GetByEncodedName(string encodedName);
+        Task<Match> GetMatchById(int matchId);
         Task Edit();
         Task AddParticipant(TournamentParticipant tournamentParticipant);
         Task JoinTeam(TeamMember teamMember);
+        Task UpdateTournamentState(Tournament tournament);
+        Task GenerateScheudle(int tournamentId);
         public bool IsUserAlreadyRegistered(int tournamentId);
         public bool IsUserAlreadyInTeam(int tournamentId, int teamId);
+        public int GetTeamSize(int tournamentTeamId);
+        public int GetNumberOfUsersInTeam(int tournamentTeamId);
         Task<TournamentGame> GetGameById(int gameId);
         Task<IEnumerable<Team>> GetAllTeams();
 

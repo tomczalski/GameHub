@@ -11,10 +11,10 @@ C:\Users\tomcz\source\repos\GameHub.MVC\GameHub.Infrastructure\obj\Debug\net7.0\
 C:\Users\tomcz\source\repos\GameHub.MVC\GameHub.Infrastructure\obj\Debug\net7.0\GameHub.Infrastructure.AssemblyInfoInputs.cache
 C:\Users\tomcz\source\repos\GameHub.MVC\GameHub.Infrastructure\obj\Debug\net7.0\GameHub.Infrastructure.AssemblyInfo.cs
 C:\Users\tomcz\source\repos\GameHub.MVC\GameHub.Infrastructure\obj\Debug\net7.0\GameHub.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\tomcz\source\repos\GameHub.MVC\GameHub.Infrastructure\obj\Debug\net7.0\GameHub.Infrastructure.sourcelink.json
+C:\Users\tomcz\source\repos\GameHub.MVC\GameHub.Infrastructure\obj\Debug\net7.0\GameHub..62134325.Up2Date
 C:\Users\tomcz\source\repos\GameHub.MVC\GameHub.Infrastructure\obj\Debug\net7.0\GameHub.Infrastructure.dll
 C:\Users\tomcz\source\repos\GameHub.MVC\GameHub.Infrastructure\obj\Debug\net7.0\refint\GameHub.Infrastructure.dll
 C:\Users\tomcz\source\repos\GameHub.MVC\GameHub.Infrastructure\obj\Debug\net7.0\GameHub.Infrastructure.pdb
 C:\Users\tomcz\source\repos\GameHub.MVC\GameHub.Infrastructure\obj\Debug\net7.0\GameHub.Infrastructure.genruntimeconfig.cache
 C:\Users\tomcz\source\repos\GameHub.MVC\GameHub.Infrastructure\obj\Debug\net7.0\ref\GameHub.Infrastructure.dll
-C:\Users\tomcz\source\repos\GameHub.MVC\GameHub.Infrastructure\obj\Debug\net7.0\GameHub.Infrastructure.sourcelink.json
-C:\Users\tomcz\source\repos\GameHub.MVC\GameHub.Infrastructure\obj\Debug\net7.0\GameHub..62134325.Up2Date

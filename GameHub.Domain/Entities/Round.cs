@@ -12,7 +12,7 @@ namespace GameHub.Domain.Entities
         public string Name { get; set; }
         public int RoundNumber { get; set; }
         public Tournament Tournament { get; set; }
-        public int MaxRounds { get; private set; }
+        public int MaxRounds { get;  set; }
 
         public Round() { }  
         public Round(Tournament tournament)

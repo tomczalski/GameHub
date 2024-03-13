@@ -36,9 +36,10 @@ namespace GameHub.Application.Tournament.Commands.JoinTeam
             teamMember.UserId = user.Id;
             teamMember.TeamId = request.TournamentTeamId;
             teamMember.Username = user.Email;
-            
 
             await _tournamentRepository.JoinTeam(teamMember);
+            await _tournamentRepository.UpdateTournamentState(tournament);
+            await _tournamentRepository.GenerateScheudle(tournamentId);
             return Unit.Value;
         }
 

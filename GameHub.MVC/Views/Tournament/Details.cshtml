@@ -59,29 +59,23 @@
             @if (Model.Tournament.IsEditable)
             {
                 <a class="btn btn-secondary" asp-controller="Tournament" asp-action="Edit" asp-route-encodedName="@Model.Tournament.EncodedName">Edytuj</a>
+        
 
-                <form asp-controller="Tournament" asp-action="AddParticipant" method="post">
+             @*    <form asp-controller="Tournament" asp-action="AddParticipant" method="post">
                     <input type="hidden" name="EncodedName" value="@Model.Tournament.EncodedName" />
                     <input type="hidden" name="TournamentId" value="@Model.Tournament.Id" />
                     <input type="hidden" name="UserId" value="" />
                     <input type="hidden" name="Username" value="" />
                     <button type="submit" class="btn btn-primary">Dołącz</button>
                     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                </form>
+                </form> *@
+            }
+            @if (Model.Tournament.TournamentState == GameHub.Domain.Entities.TournamentState.Started)
+            {
+                <a class="btn btn-primary" asp-controller="Tournament" asp-action="Bracket" asp-route-encodedName="@Model.Tournament.EncodedName">Pokaż drabinkę</a>
             }
             |
             <a asp-controller="Home" asp-action="Index">Powrót</a>
-        </div>
-
-        <div>
-            <h2>Lista uczestników:</h2>
-            <input type="hidden" name="EncodedName" value="@Model.Tournament.EncodedName" />
-            <ul>
-                @foreach (var participant in Model.Participants)
-                {
-                    <li>@participant.Username</li>
-                }
-            </ul>
         </div>
     </div>
 
@@ -89,12 +83,18 @@
         <h2>Lista zespołów:</h2>
         @foreach (var team in Model.TournamentTeams)
         {
+            
+            int numberOfMembers = team.Members.Count();
+            int teamSize = team.TeamSize; 
+            
             <div class="card mb-3">
                 <div class="card-header">
                     @team.Name
                 </div>
                 <div class="card-body">
+                    <p class="card-text"><small>Liczba członków: @numberOfMembers/@teamSize</small></p>
                     <!-- Przycisk do dołączania do drużyny -->
+                    
                     <form asp-controller="Tournament" asp-action="JoinTeam" method="post">
                         <input type="hidden" name="EncodedName" value="@Model.Tournament.EncodedName" />
                         <input type="hidden" name="TournamentId" value="@Model.Tournament.Id" />
@@ -104,7 +104,7 @@
                         <button type="submit" class="btn btn-primary">Dołącz do drużyny</button>
                         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                     </form>
-
+                    
                     <!-- Lista członków drużyny -->
                     <h5 class="card-title">Członkowie drużyny:</h5>
                     <input type="hidden" name="tournamentTeamId" value="@team.Id" />

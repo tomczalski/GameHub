@@ -52,12 +52,80 @@ namespace GameHub.Infrastructure.Repositories
             _dbContext.TeamMembers.Add(teamMember);
             await _dbContext.SaveChangesAsync();
         }
+
+        public async Task UpdateTournamentState(Tournament tournament)
+        {
+            var teams = await _dbContext.Teams.Where(x => x.TournamentId == tournament.Id).Include(x => x.TeamMembers).ToListAsync();
+            bool allTeamsFull = true;
+
+            foreach (var team in teams)
+            {
+                if (team.TeamMembers.Count() != team.TeamSize)
+                {
+                    allTeamsFull = false;
+                    break;
+                }
+            }
+
+            if (allTeamsFull)
+            {
+                tournament.TournamentState = TournamentState.Started;
+                await _dbContext.SaveChangesAsync();
+            }
+        }
+        public async Task GenerateScheudle(int tournamentId)
+        {
+            var tournament = await _dbContext.Tournaments
+                .Include(t => t.Teams)
+                .FirstOrDefaultAsync(t => t.Id == tournamentId);
+
+            bool isTournamentStarted = false;
+            if (tournament.TournamentState == TournamentState.Started)
+            {
+                isTournamentStarted = true;
+            }
+
+            if (isTournamentStarted)
+            {
+                var rounds = new List<Round>();
+                for (int roundNumber = 1; roundNumber <= tournament.MaxRounds; roundNumber++)
+                {
+                    var round = new Round
+                    {
+                        Name = "Round " + roundNumber,
+                        RoundNumber = roundNumber,
+                        Tournament = tournament,
+                        MaxRounds = tournament.MaxRounds
+                    };
+                    rounds.Add(round);
+                    _dbContext.Rounds.Add(round);
+                }
+
+                var teams = tournament.Teams.ToList();
+                var shuffledTeams = teams.OrderBy(t => Guid.NewGuid()).ToList();
+
+                for (int i = 0; i < shuffledTeams.Count; i += 2)
+                {
+                    var match = new Match
+                    {
+                        Round = rounds[0],
+                        Team1 = shuffledTeams[i],
+                        Team2 = shuffledTeams[i + 1]
+                    };
+                    _dbContext.Matches.Add(match);
+                }
+                await _dbContext.SaveChangesAsync();
+            }  
+        }
+
         public async Task<IEnumerable<Tournament>> GetAll() => await _dbContext.Tournaments.Include(x => x.Game).ToListAsync();
         public async Task<IEnumerable<TournamentGame>> GetAllGames() => await _dbContext.TournamentGames.ToListAsync();
         public async Task<Tournament> GetByEncodedName(string encodedName) => await _dbContext.Tournaments.Include(x => x.Game).FirstAsync(c => c.EncodedName == encodedName);
         public async Task<IEnumerable<TournamentParticipant>> GetAllParticipants() => await _dbContext.TournamentParticipants.ToArrayAsync();
         public async Task<IEnumerable<TeamMember>> GetAllTeamMembers() => await _dbContext.TeamMembers.ToArrayAsync();
         public async Task<IEnumerable<Team>> GetAllTeams() => await _dbContext.Teams.Include(x => x.TeamMembers).ToArrayAsync();
+        public async Task<IEnumerable<Match>> GetAllMatches() => await _dbContext.Matches.Include(x => x.Round).ThenInclude(t => t.Tournament).ToArrayAsync();
+        public async Task<Match> GetMatchById(int matchId) => await _dbContext.Matches.Include(x => x.Round).ThenInclude(t => t.Tournament).FirstAsync(m => m.Id == matchId);
         public bool IsUserAlreadyRegistered(int tournamentId)
         {
             var userId = _userContext.GetCurrentUser().Id;
@@ -90,5 +158,28 @@ namespace GameHub.Infrastructure.Repositories
         {
             return await _dbContext.TournamentGames.FirstOrDefaultAsync(c => c.Id == gameId);
         }
+
+
+        public int GetTeamSize(int tournamentTeamId)
+        {
+            var teamDetails = _dbContext.Teams.FirstOrDefault(team => team.Id == tournamentTeamId);
+
+            if (teamDetails != null)
+            {
+                return teamDetails.TeamSize;
+            }
+            else
+            { 
+                throw new Exception("Team size not found for the given team id.");
+            }
+        }
+
+        public int GetNumberOfUsersInTeam(int tournamentTeamId)
+        {
+            var numberOfUsers = _dbContext.TeamMembers.Count(member => member.TeamId == tournamentTeamId);
+            return numberOfUsers;
+        }
+
+
     }
 }

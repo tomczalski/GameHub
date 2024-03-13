@@ -26,6 +26,19 @@ namespace GameHub.Application.Tournament.Commands.JoinTeam
                     }
                 });
 
+            RuleFor(x => x)
+                .Custom((command, context) =>
+                {
+                    var teamSize = _repository.GetTeamSize(command.TournamentTeamId);
+                    var numberOfUsersInTeam = _repository.GetNumberOfUsersInTeam(command.TournamentTeamId);
+
+                    if (numberOfUsersInTeam >= teamSize)
+                    {
+                        context.AddFailure($"Drużyna jest pełna.");
+                    }
+                });
+
+
 
         }
     }

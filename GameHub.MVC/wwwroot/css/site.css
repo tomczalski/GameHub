@@ -20,3 +20,30 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.round {
+    margin-bottom: 20px;
+}
+
+.matches {
+    display: flex;
+    flex-direction: column;
+}
+
+.match {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.team {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+
+.team:nth-child(odd) {
+    background-color: #f0f0f0;
+}
