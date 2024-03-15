@@ -1,0 +1,12 @@
+C:\Users\tomcz\source\repos\GameHub.MVC\GameHub.Domain\bin\Debug\net7.0\GameHub.Domain.deps.json
+C:\Users\tomcz\source\repos\GameHub.MVC\GameHub.Domain\bin\Debug\net7.0\GameHub.Domain.dll
+C:\Users\tomcz\source\repos\GameHub.MVC\GameHub.Domain\bin\Debug\net7.0\GameHub.Domain.pdb
+C:\Users\tomcz\source\repos\GameHub.MVC\GameHub.Domain\obj\Debug\net7.0\GameHub.Domain.csproj.AssemblyReference.cache
+C:\Users\tomcz\source\repos\GameHub.MVC\GameHub.Domain\obj\Debug\net7.0\GameHub.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tomcz\source\repos\GameHub.MVC\GameHub.Domain\obj\Debug\net7.0\GameHub.Domain.AssemblyInfoInputs.cache
+C:\Users\tomcz\source\repos\GameHub.MVC\GameHub.Domain\obj\Debug\net7.0\GameHub.Domain.AssemblyInfo.cs
+C:\Users\tomcz\source\repos\GameHub.MVC\GameHub.Domain\obj\Debug\net7.0\GameHub.Domain.csproj.CoreCompileInputs.cache
+C:\Users\tomcz\source\repos\GameHub.MVC\GameHub.Domain\obj\Debug\net7.0\GameHub.Domain.dll
+C:\Users\tomcz\source\repos\GameHub.MVC\GameHub.Domain\obj\Debug\net7.0\refint\GameHub.Domain.dll
+C:\Users\tomcz\source\repos\GameHub.MVC\GameHub.Domain\obj\Debug\net7.0\GameHub.Domain.pdb
+C:\Users\tomcz\source\repos\GameHub.MVC\GameHub.Domain\obj\Debug\net7.0\ref\GameHub.Domain.dll

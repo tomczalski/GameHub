@@ -1,0 +1,122 @@
+﻿@model TournamentDetailsViewModel
+
+@{
+    ViewData["Title"] = "Szczegóły";
+}
+
+<h1>Szczegóły turnieju</h1>
+
+<div class="row">
+    <div class="col-md-6">
+        <input type="hidden" name="EncodedName" value="@Model.Tournament.EncodedName" />
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Tournament.Name)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Tournament.Name)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Tournament.Game)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Tournament.Game.GameName)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Tournament.Description)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Tournament.Description)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Tournament.StartDate)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Tournament.StartDate)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Tournament.Prize)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Tournament.Prize)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Tournament.EncodedName)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Tournament.EncodedName)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Tournament.NumberOfTeams)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Tournament.NumberOfTeams)
+            </dd>
+        </dl>
+
+        <div>
+            @if (Model.Tournament.IsEditable)
+            {
+                <a class="btn btn-secondary" asp-controller="Tournament" asp-action="Edit" asp-route-encodedName="@Model.Tournament.EncodedName">Edytuj</a>
+        
+
+             @*    <form asp-controller="Tournament" asp-action="AddParticipant" method="post">
+                    <input type="hidden" name="EncodedName" value="@Model.Tournament.EncodedName" />
+                    <input type="hidden" name="TournamentId" value="@Model.Tournament.Id" />
+                    <input type="hidden" name="UserId" value="" />
+                    <input type="hidden" name="Username" value="" />
+                    <button type="submit" class="btn btn-primary">Dołącz</button>
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                </form> *@
+            }
+            @if (Model.Tournament.TournamentState == GameHub.Domain.Entities.TournamentState.Started)
+            {
+                <a class="btn btn-primary" asp-controller="Tournament" asp-action="Bracket" asp-route-encodedName="@Model.Tournament.EncodedName">Pokaż drabinkę</a>
+            }
+            |
+            <a asp-controller="Home" asp-action="Index">Powrót</a>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <h2>Lista zespołów:</h2>
+        @foreach (var team in Model.TournamentTeams)
+        {
+            
+            int numberOfMembers = team.Members.Count();
+            int teamSize = team.TeamSize; 
+            
+            <div class="card mb-3">
+                <div class="card-header">
+                    @team.Name
+                </div>
+                <div class="card-body">
+                    <p class="card-text"><small>Liczba członków: @numberOfMembers/@teamSize</small></p>
+                    <!-- Przycisk do dołączania do drużyny -->
+                    
+                    <form asp-controller="Tournament" asp-action="JoinTeam" method="post">
+                        <input type="hidden" name="EncodedName" value="@Model.Tournament.EncodedName" />
+                        <input type="hidden" name="TournamentId" value="@Model.Tournament.Id" />
+                        <input type="hidden" name="tournamentTeamId" value="@team.Id" />
+                        <input type="hidden" name="UserId" value="" />
+                        <input type="hidden" name="Username" value="" />
+                        <button type="submit" class="btn btn-primary">Dołącz do drużyny</button>
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    </form>
+                    
+                    <!-- Lista członków drużyny -->
+                    <h5 class="card-title">Członkowie drużyny:</h5>
+                    <input type="hidden" name="tournamentTeamId" value="@team.Id" />
+                    <ul>
+                        @foreach (var member in team.Members)
+                        {
+                            <li>@member</li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        }
+    </div>
+
+</div>

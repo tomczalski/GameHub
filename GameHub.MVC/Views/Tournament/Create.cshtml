@@ -1,0 +1,66 @@
+﻿@using GameHub.Application.Tournament.Commands.Tournament;
+@model CreateTournamentCommand
+
+
+
+<h1>Dodaj turniej</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label">Nazwa</label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+           <!-- <div class="form-group">
+                <label asp-for="Game" class="control-label">Gra</label>
+                <input asp-for="Game" class="form-control" />
+                <span asp-validation-for="Game" class="text-danger"></span>
+            </div>-->
+            <div class="form-group">
+                <label for="gameSelect" class="control-label">Gra</label>
+                <select asp-for="GameId" class="form-control" asp-items="@ViewBag.GamesSelectList">
+                    <option value="">Wybierz grę...</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label">Opis</label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StartDate" class="control-label">Data rozpoczęcia</label>
+                <input asp-for="StartDate" class="form-control" type="date" />
+                <span asp-validation-for="StartDate" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Prize" class="control-label">Nagroda</label>
+                <input asp-for="Prize" class="form-control" />
+                <span asp-validation-for="Prize" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NumberOfTeams" class="control-label">Liczba drużyn</label>
+                <input asp-for="NumberOfTeams" class="form-control" />
+                <span asp-validation-for="NumberOfTeams" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Dodaj" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Powrót do listy</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
