@@ -9,6 +9,6 @@ namespace GameHub.Application.Tournament.Commands.EditScore
 {
     public class EditScoreCommand : MatchDto, IRequest
     {
-    
+        public int TournamentId { get; set; }
     }
 }

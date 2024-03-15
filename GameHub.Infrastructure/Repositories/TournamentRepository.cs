@@ -118,6 +118,48 @@ namespace GameHub.Infrastructure.Repositories
             }  
         }
 
+        public async Task AdvanceTeams(int tournamentId, int roundId)
+        {
+            var tournament = await _dbContext.Tournaments.FirstOrDefaultAsync(t => t.Id == tournamentId);
+            var rounds = await _dbContext.Rounds.Where(t => t.Tournament == tournament).ToListAsync();
+            var currentRound = await _dbContext.Rounds.Where(r => r.Id == roundId).FirstOrDefaultAsync();
+            var matches = await _dbContext.Matches.Where(m => m.RoundId == roundId).ToListAsync();
+
+            if (tournament == null)
+            {
+                throw new ArgumentException("Nie znaleziono turnieju.");
+            }
+
+            var nextRoundNumber = currentRound.RoundNumber + 1;
+            var nextRound = rounds.FirstOrDefault(r => r.RoundNumber == nextRoundNumber);
+
+            if (nextRound == null)
+            {
+                tournament.TournamentState = TournamentState.Ended;
+                await _dbContext.SaveChangesAsync();
+                return;
+            }
+
+            if (matches.All(m => m.WinnerId != 0))
+            {
+                var advancedTeamIds = matches.Where(m => m.WinnerId != 0).Select(m => m.WinnerId).ToList();
+                var advancedTeams = await _dbContext.Teams.Where(t => advancedTeamIds.Contains(t.Id)).ToListAsync();
+
+                for (int i = 0; i < advancedTeams.Count; i+=2)
+                {
+                    var match = new Match
+                    {
+                        Round = nextRound,
+                        Team1 = advancedTeams[i],
+                        Team2 = advancedTeams[i + 1]
+                    };
+                    _dbContext.Matches.Add(match);
+                }
+
+                await _dbContext.SaveChangesAsync();
+            }  
+        }
+
         public async Task<IEnumerable<Tournament>> GetAll() => await _dbContext.Tournaments.Include(x => x.Game).ToListAsync();
         public async Task<IEnumerable<TournamentGame>> GetAllGames() => await _dbContext.TournamentGames.ToListAsync();
         public async Task<Tournament> GetByEncodedName(string encodedName) => await _dbContext.Tournaments.Include(x => x.Game).FirstAsync(c => c.EncodedName == encodedName);

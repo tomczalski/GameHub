@@ -20,11 +20,12 @@
                             <div class="team">@match.Id</div>
                             <input asp-for="@Model.MatchForm.Team1Id" type="hidden" value="@match.Team1Id" />
                             <input asp-for="@Model.MatchForm.Team2Id" type="hidden" value="@match.Team2Id" />
-                            <input asp-for="@Model.MatchForm.Team1Score" type="text" placeholder="Wynik: @match.Team1Id" />
+                            <input asp-for="@Model.MatchForm.Team1Score" type="text" value="@match.Team1Score" placeholder="Wynik: @match.Team1Id" />
                             <span>vs</span>
-                            <input asp-for="@Model.MatchForm.Team2Score" type="text" placeholder="Wynik: @match.Team2Id" />
+                            <input asp-for="@Model.MatchForm.Team2Score" type="text" value="@match.Team2Score" placeholder="Wynik: @match.Team2Id" />
                             <input asp-for="@Model.MatchForm.Id" type="hidden" value="@match.Id" />
                             <input type="hidden" name="EncodedName" value="@Model.Tournament.EncodedName" />
+                            <input type="hidden" name="TournamentId" value="@Model.Tournament.Id" />
                             <button type="submit" class="btn btn-primary">Zapisz wynik</button>
                          </form>
                     </div>

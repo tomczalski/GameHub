@@ -181,6 +181,7 @@ namespace GameHub.MVC.Controllers
             {
                 Tournament = tournamentDto,
                 Matches = matchesDto,
+                MatchForm = new MatchDto()
             };
 
             
@@ -189,11 +190,12 @@ namespace GameHub.MVC.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Bracket(EditScoreViewModel scoreModel, string encodedName)
+        [Route("Tournament/{encodedName}/Bracket")]
+        public async Task<IActionResult> Bracket(EditScoreViewModel scoreModel, string encodedName, int tournamentId)
         {
             ModelState.Remove("Tournament");
             ModelState.Remove("Matches");
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 var tournamentDto = await _mediator.Send(new GetTournamentByEncodedNameQuery(encodedName));
                 var matchesDto = await _mediator.Send(new GetAllTournamentMatchesQuery(encodedName));
@@ -202,6 +204,7 @@ namespace GameHub.MVC.Controllers
                 {
                     Tournament = tournamentDto,
                     Matches = matchesDto,
+                    MatchForm = new MatchDto()
                 };
 
                 return View(model);
@@ -209,10 +212,12 @@ namespace GameHub.MVC.Controllers
             var command = new EditScoreCommand()
             {
                 Id = scoreModel.MatchForm.Id,
+                RoundId = scoreModel.MatchForm.RoundId,
                 Team1Id = scoreModel.MatchForm.Team1Id,
                 Team2Id = scoreModel.MatchForm.Team2Id,
                 Team1Score = scoreModel.MatchForm.Team1Score,
                 Team2Score = scoreModel.MatchForm.Team2Score,
+                TournamentId = tournamentId
             };
 
             await _mediator.Send(command);

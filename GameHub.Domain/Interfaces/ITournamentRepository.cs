@@ -23,6 +23,7 @@ namespace GameHub.Domain.Interfaces
         Task JoinTeam(TeamMember teamMember);
         Task UpdateTournamentState(Tournament tournament);
         Task GenerateScheudle(int tournamentId);
+        Task AdvanceTeams(int tournamentId, int roundId);
         public bool IsUserAlreadyRegistered(int tournamentId);
         public bool IsUserAlreadyInTeam(int tournamentId, int teamId);
         public int GetTeamSize(int tournamentTeamId);

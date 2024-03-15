@@ -34,7 +34,7 @@ namespace GameHub.Application.Tournament.Commands.EditScore
             else { matchToEdit.WinnerId = request.Team2Id; }
 
             await _tournamentRepository.Edit();
-
+            await _tournamentRepository.AdvanceTeams(request.TournamentId, matchToEdit.RoundId);
             return Unit.Value;
         }
     }
