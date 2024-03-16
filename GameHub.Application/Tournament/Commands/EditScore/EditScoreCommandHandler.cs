@@ -26,7 +26,7 @@ namespace GameHub.Application.Tournament.Commands.EditScore
 
             matchToEdit.Team1Score = request.Team1Score;
             matchToEdit.Team2Score = request.Team2Score;
-
+            matchToEdit.MatchState = Domain.Entities.MatchState.Ended;
             if (matchToEdit.Team1Score > matchToEdit.Team2Score) 
             {
                 matchToEdit.WinnerId = request.Team1Id;
@@ -35,6 +35,8 @@ namespace GameHub.Application.Tournament.Commands.EditScore
 
             await _tournamentRepository.Edit();
             await _tournamentRepository.AdvanceTeams(request.TournamentId, matchToEdit.RoundId);
+
+            
             return Unit.Value;
         }
     }

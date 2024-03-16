@@ -73,6 +73,7 @@ namespace GameHub.Infrastructure.Repositories
                 await _dbContext.SaveChangesAsync();
             }
         }
+
         public async Task GenerateScheudle(int tournamentId)
         {
             var tournament = await _dbContext.Tournaments
@@ -124,6 +125,7 @@ namespace GameHub.Infrastructure.Repositories
             var rounds = await _dbContext.Rounds.Where(t => t.Tournament == tournament).ToListAsync();
             var currentRound = await _dbContext.Rounds.Where(r => r.Id == roundId).FirstOrDefaultAsync();
             var matches = await _dbContext.Matches.Where(m => m.RoundId == roundId).ToListAsync();
+            var lastRound = rounds.Last();
 
             if (tournament == null)
             {
@@ -135,7 +137,7 @@ namespace GameHub.Infrastructure.Repositories
 
             if (nextRound == null)
             {
-                tournament.TournamentState = TournamentState.Ended;
+                tournament.TournamentState = TournamentState.Ended; 
                 await _dbContext.SaveChangesAsync();
                 return;
             }
@@ -144,6 +146,23 @@ namespace GameHub.Infrastructure.Repositories
             {
                 var advancedTeamIds = matches.Where(m => m.WinnerId != 0).Select(m => m.WinnerId).ToList();
                 var advancedTeams = await _dbContext.Teams.Where(t => advancedTeamIds.Contains(t.Id)).ToListAsync();
+
+                if (advancedTeams.Count % 2 != 0)
+                {
+                    var advancedTeam = advancedTeams[advancedTeams.Count - 1];
+                    advancedTeams.RemoveAt(advancedTeams.Count - 1);
+
+                    var advancedMatch = new Match
+                    {
+                        Round = nextRound,
+                        Team1 = advancedTeam,
+                        Team2 = advancedTeam,
+                        Team1Score = 3,
+                        Team2Score = 0,
+                        WinnerId = advancedTeam.Id
+                    };
+                    _dbContext.Matches.Add(advancedMatch);
+                }
 
                 for (int i = 0; i < advancedTeams.Count; i+=2)
                 {
@@ -155,7 +174,11 @@ namespace GameHub.Infrastructure.Repositories
                     };
                     _dbContext.Matches.Add(match);
                 }
-
+                if (tournament.TournamentState == TournamentState.Ended)
+                {
+                    var winner = await _dbContext.Matches.Where(m => m.RoundId == lastRound.Id).FirstOrDefaultAsync();
+                    tournament.WinnerId = winner.WinnerId;
+                }
                 await _dbContext.SaveChangesAsync();
             }  
         }

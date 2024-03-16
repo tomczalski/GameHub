@@ -23,6 +23,12 @@ namespace GameHub.MVC.Controllers
             return View(tournaments);
         }
 
+        public async Task<IActionResult> ArchiveTournaments()
+        {
+            var tournaments = await _mediator.Send(new GetAllTournamentsQuery());
+            return View(tournaments);
+        }
+
         public IActionResult Privacy()
         {
             return View();

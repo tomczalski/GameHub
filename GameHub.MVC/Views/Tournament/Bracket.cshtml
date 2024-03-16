@@ -1,4 +1,5 @@
-﻿@model EditScoreViewModel
+﻿@using GameHub.Domain.Entities
+@model EditScoreViewModel
 
 @{
     ViewData["Title"] = "Bracket";
@@ -26,7 +27,10 @@
                             <input asp-for="@Model.MatchForm.Id" type="hidden" value="@match.Id" />
                             <input type="hidden" name="EncodedName" value="@Model.Tournament.EncodedName" />
                             <input type="hidden" name="TournamentId" value="@Model.Tournament.Id" />
-                            <button type="submit" class="btn btn-primary">Zapisz wynik</button>
+                            @if (match.MatchState != MatchState.Ended)
+                            {
+                                <button type="submit" class="btn btn-primary">Zapisz wynik</button>
+                            }
                          </form>
                     </div>
                     }

@@ -37,6 +37,9 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark @(controller == "Tournament" && action == "Create" ? "active" : "")" asp-area="" asp-controller="Tournament" asp-action="Create">Stwórz turniej</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark @(controller == "Home" && action == "ArchiveTournaments" ? "active" : "")" asp-area="" asp-controller="Home" asp-action="ArchiveTournaments">Zakończone turnieje</a>
+                        </li>
                     </ul>
                     <partial name="_LoginPartial" />
                 </div>

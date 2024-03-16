@@ -1,4 +1,5 @@
-﻿@model IEnumerable<GameHub.Application.Tournament.TournamentDto>
+﻿@using GameHub.Domain.Entities
+@model IEnumerable<GameHub.Application.Tournament.TournamentDto>
 
 @{
     ViewData["Title"] = "Aktualne turnieje";
@@ -10,13 +11,13 @@
     <a asp-controller="Tournament" asp-action="Create" class="btn btn-secondary">Dodaj nowy</a>
 </p>
 <div class="row">
-@foreach (var item in Model) 
-{
+    @foreach (var item in Model.Where(t => t.TournamentState != TournamentState.Ended))
+    {
         <div class="card m-3" style="width: 18rem;">           
             <div class="card-body">
                 <h5 class="card-title">@item.Name</h5>
                 <h6 class="card-subtitle mb-2 text-muted">@item.Game.GameName</h6>
-                <p class="card-text">@item.Description</p>
+                <p class="card-text">@item.StartDate</p>
                 <a class="btn btn-primary" asp-controller="Tournament" asp-action="Details" asp-route-encodedName="@item.EncodedName">Szczegóły</a>
                 @if (item.IsEditable)
                 {

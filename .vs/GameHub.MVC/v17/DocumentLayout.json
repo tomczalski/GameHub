@@ -3,20 +3,76 @@
   "WorkspaceRootPath": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AD4100A0-CD99-4694-B5E2-FD8142B21CDE}|GameHub.MVC\\GameHub.MVC.csproj|c:\\users\\tomcz\\source\\repos\\gamehub.mvc\\gamehub.mvc\\gamehub.mvc.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{AD4100A0-CD99-4694-B5E2-FD8142B21CDE}|GameHub.MVC\\GameHub.MVC.csproj|solutionrelative:gamehub.mvc\\gamehub.mvc.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{3801BDD9-C51F-4526-83F8-EE6689531948}|GameHub.Domain\\GameHub.Domain.csproj|c:\\users\\tomcz\\source\\repos\\gamehub.mvc\\gamehub.domain\\entities\\team.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3801BDD9-C51F-4526-83F8-EE6689531948}|GameHub.Domain\\GameHub.Domain.csproj|solutionrelative:gamehub.domain\\entities\\team.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Infrastructure\\Migrations\\20240315152656_Init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:GameHub.Infrastructure\\Migrations\\20240315152656_Init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3801BDD9-C51F-4526-83F8-EE6689531948}|GameHub.Domain\\GameHub.Domain.csproj|c:\\users\\tomcz\\source\\repos\\gamehub.mvc\\gamehub.domain\\entities\\teammember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3801BDD9-C51F-4526-83F8-EE6689531948}|GameHub.Domain\\GameHub.Domain.csproj|solutionrelative:gamehub.domain\\entities\\teammember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3801BDD9-C51F-4526-83F8-EE6689531948}|GameHub.Domain\\GameHub.Domain.csproj|c:\\users\\tomcz\\source\\repos\\gamehub.mvc\\gamehub.domain\\interfaces\\itournamentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3801BDD9-C51F-4526-83F8-EE6689531948}|GameHub.Domain\\GameHub.Domain.csproj|solutionrelative:gamehub.domain\\interfaces\\itournamentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63D6388F-3E78-4B8F-B481-56518E18EF3C}|GameHub.Infrastructure\\GameHub.Infrastructure.csproj|c:\\users\\tomcz\\source\\repos\\gamehub.mvc\\gamehub.infrastructure\\repositories\\tournamentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63D6388F-3E78-4B8F-B481-56518E18EF3C}|GameHub.Infrastructure\\GameHub.Infrastructure.csproj|solutionrelative:gamehub.infrastructure\\repositories\\tournamentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{974F26A4-F8E6-40AC-99FC-DEFF5655A810}|GameHub.Application\\GameHub.Application.csproj|c:\\users\\tomcz\\source\\repos\\gamehub.mvc\\gamehub.application\\tournament\\commands\\jointeam\\jointeamcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{974F26A4-F8E6-40AC-99FC-DEFF5655A810}|GameHub.Application\\GameHub.Application.csproj|solutionrelative:gamehub.application\\tournament\\commands\\jointeam\\jointeamcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{974F26A4-F8E6-40AC-99FC-DEFF5655A810}|GameHub.Application\\GameHub.Application.csproj|c:\\users\\tomcz\\source\\repos\\gamehub.mvc\\gamehub.application\\tournament\\commands\\editscore\\editscorecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{974F26A4-F8E6-40AC-99FC-DEFF5655A810}|GameHub.Application\\GameHub.Application.csproj|solutionrelative:gamehub.application\\tournament\\commands\\editscore\\editscorecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD4100A0-CD99-4694-B5E2-FD8142B21CDE}|GameHub.MVC\\GameHub.MVC.csproj|c:\\users\\tomcz\\source\\repos\\gamehub.mvc\\gamehub.mvc\\views\\tournament\\bracket.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD4100A0-CD99-4694-B5E2-FD8142B21CDE}|GameHub.MVC\\GameHub.MVC.csproj|solutionrelative:gamehub.mvc\\views\\tournament\\bracket.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD4100A0-CD99-4694-B5E2-FD8142B21CDE}|GameHub.MVC\\GameHub.MVC.csproj|c:\\users\\tomcz\\source\\repos\\gamehub.mvc\\gamehub.mvc\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD4100A0-CD99-4694-B5E2-FD8142B21CDE}|GameHub.MVC\\GameHub.MVC.csproj|solutionrelative:gamehub.mvc\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{974F26A4-F8E6-40AC-99FC-DEFF5655A810}|GameHub.Application\\GameHub.Application.csproj|c:\\users\\tomcz\\source\\repos\\gamehub.mvc\\gamehub.application\\tournament\\commands\\createtournament\\createtournamentcommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{974F26A4-F8E6-40AC-99FC-DEFF5655A810}|GameHub.Application\\GameHub.Application.csproj|solutionrelative:gamehub.application\\tournament\\commands\\createtournament\\createtournamentcommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD4100A0-CD99-4694-B5E2-FD8142B21CDE}|GameHub.MVC\\GameHub.MVC.csproj|c:\\users\\tomcz\\source\\repos\\gamehub.mvc\\gamehub.mvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD4100A0-CD99-4694-B5E2-FD8142B21CDE}|GameHub.MVC\\GameHub.MVC.csproj|solutionrelative:gamehub.mvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD4100A0-CD99-4694-B5E2-FD8142B21CDE}|GameHub.MVC\\GameHub.MVC.csproj|c:\\users\\tomcz\\source\\repos\\gamehub.mvc\\gamehub.mvc\\views\\home\\archivetournaments.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD4100A0-CD99-4694-B5E2-FD8142B21CDE}|GameHub.MVC\\GameHub.MVC.csproj|solutionrelative:gamehub.mvc\\views\\home\\archivetournaments.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD4100A0-CD99-4694-B5E2-FD8142B21CDE}|GameHub.MVC\\GameHub.MVC.csproj|c:\\users\\tomcz\\source\\repos\\gamehub.mvc\\gamehub.mvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD4100A0-CD99-4694-B5E2-FD8142B21CDE}|GameHub.MVC\\GameHub.MVC.csproj|solutionrelative:gamehub.mvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{974F26A4-F8E6-40AC-99FC-DEFF5655A810}|GameHub.Application\\GameHub.Application.csproj|c:\\users\\tomcz\\source\\repos\\gamehub.mvc\\gamehub.application\\tournament\\tournamentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{974F26A4-F8E6-40AC-99FC-DEFF5655A810}|GameHub.Application\\GameHub.Application.csproj|solutionrelative:gamehub.application\\tournament\\tournamentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{3801BDD9-C51F-4526-83F8-EE6689531948}|GameHub.Domain\\GameHub.Domain.csproj|c:\\users\\tomcz\\source\\repos\\gamehub.mvc\\gamehub.domain\\entities\\match.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3801BDD9-C51F-4526-83F8-EE6689531948}|GameHub.Domain\\GameHub.Domain.csproj|solutionrelative:gamehub.domain\\entities\\match.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{974F26A4-F8E6-40AC-99FC-DEFF5655A810}|GameHub.Application\\GameHub.Application.csproj|c:\\users\\tomcz\\source\\repos\\gamehub.mvc\\gamehub.application\\tournament\\matchdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{974F26A4-F8E6-40AC-99FC-DEFF5655A810}|GameHub.Application\\GameHub.Application.csproj|solutionrelative:gamehub.application\\tournament\\matchdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{974F26A4-F8E6-40AC-99FC-DEFF5655A810}|GameHub.Application\\GameHub.Application.csproj|c:\\users\\tomcz\\source\\repos\\gamehub.mvc\\gamehub.application\\tournament\\teamdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{974F26A4-F8E6-40AC-99FC-DEFF5655A810}|GameHub.Application\\GameHub.Application.csproj|solutionrelative:gamehub.application\\tournament\\teamdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63D6388F-3E78-4B8F-B481-56518E18EF3C}|GameHub.Infrastructure\\GameHub.Infrastructure.csproj|c:\\users\\tomcz\\source\\repos\\gamehub.mvc\\gamehub.infrastructure\\extensions\\servicecollectionextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63D6388F-3E78-4B8F-B481-56518E18EF3C}|GameHub.Infrastructure\\GameHub.Infrastructure.csproj|solutionrelative:gamehub.infrastructure\\extensions\\servicecollectionextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3801BDD9-C51F-4526-83F8-EE6689531948}|GameHub.Domain\\GameHub.Domain.csproj|c:\\users\\tomcz\\source\\repos\\gamehub.mvc\\gamehub.domain\\entities\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3801BDD9-C51F-4526-83F8-EE6689531948}|GameHub.Domain\\GameHub.Domain.csproj|solutionrelative:gamehub.domain\\entities\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{974F26A4-F8E6-40AC-99FC-DEFF5655A810}|GameHub.Application\\GameHub.Application.csproj|c:\\users\\tomcz\\source\\repos\\gamehub.mvc\\gamehub.application\\tournament\\gameselectmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,14 +83,6 @@
       "RelativeMoniker": "D:0:0:{3801BDD9-C51F-4526-83F8-EE6689531948}|GameHub.Domain\\GameHub.Domain.csproj|solutionrelative:gamehub.domain\\entities\\tournament.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3801BDD9-C51F-4526-83F8-EE6689531948}|GameHub.Domain\\GameHub.Domain.csproj|c:\\users\\tomcz\\source\\repos\\gamehub.mvc\\gamehub.domain\\entities\\match.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3801BDD9-C51F-4526-83F8-EE6689531948}|GameHub.Domain\\GameHub.Domain.csproj|solutionrelative:gamehub.domain\\entities\\match.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3801BDD9-C51F-4526-83F8-EE6689531948}|GameHub.Domain\\GameHub.Domain.csproj|c:\\users\\tomcz\\source\\repos\\gamehub.mvc\\gamehub.domain\\entities\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3801BDD9-C51F-4526-83F8-EE6689531948}|GameHub.Domain\\GameHub.Domain.csproj|solutionrelative:gamehub.domain\\entities\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AD4100A0-CD99-4694-B5E2-FD8142B21CDE}|GameHub.MVC\\GameHub.MVC.csproj|c:\\users\\tomcz\\source\\repos\\gamehub.mvc\\gamehub.mvc\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{AD4100A0-CD99-4694-B5E2-FD8142B21CDE}|GameHub.MVC\\GameHub.MVC.csproj|solutionrelative:gamehub.mvc\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -43,20 +91,8 @@
       "RelativeMoniker": "D:0:0:{63D6388F-3E78-4B8F-B481-56518E18EF3C}|GameHub.Infrastructure\\GameHub.Infrastructure.csproj|solutionrelative:gamehub.infrastructure\\persistance\\gamehubdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{63D6388F-3E78-4B8F-B481-56518E18EF3C}|GameHub.Infrastructure\\GameHub.Infrastructure.csproj|c:\\users\\tomcz\\source\\repos\\gamehub.mvc\\gamehub.infrastructure\\extensions\\servicecollectionextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{63D6388F-3E78-4B8F-B481-56518E18EF3C}|GameHub.Infrastructure\\GameHub.Infrastructure.csproj|solutionrelative:gamehub.infrastructure\\extensions\\servicecollectionextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD4100A0-CD99-4694-B5E2-FD8142B21CDE}|GameHub.MVC\\GameHub.MVC.csproj|c:\\users\\tomcz\\source\\repos\\gamehub.mvc\\gamehub.mvc\\views\\tournament\\bracket.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{AD4100A0-CD99-4694-B5E2-FD8142B21CDE}|GameHub.MVC\\GameHub.MVC.csproj|solutionrelative:gamehub.mvc\\views\\tournament\\bracket.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AD4100A0-CD99-4694-B5E2-FD8142B21CDE}|GameHub.MVC\\GameHub.MVC.csproj|c:\\users\\tomcz\\source\\repos\\gamehub.mvc\\gamehub.mvc\\controllers\\tournamentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AD4100A0-CD99-4694-B5E2-FD8142B21CDE}|GameHub.MVC\\GameHub.MVC.csproj|solutionrelative:gamehub.mvc\\controllers\\tournamentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD4100A0-CD99-4694-B5E2-FD8142B21CDE}|GameHub.MVC\\GameHub.MVC.csproj|c:\\users\\tomcz\\source\\repos\\gamehub.mvc\\gamehub.mvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD4100A0-CD99-4694-B5E2-FD8142B21CDE}|GameHub.MVC\\GameHub.MVC.csproj|solutionrelative:gamehub.mvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AD4100A0-CD99-4694-B5E2-FD8142B21CDE}|GameHub.MVC\\GameHub.MVC.csproj|c:\\users\\tomcz\\source\\repos\\gamehub.mvc\\gamehub.mvc\\models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -67,28 +103,12 @@
       "RelativeMoniker": "D:0:0:{974F26A4-F8E6-40AC-99FC-DEFF5655A810}|GameHub.Application\\GameHub.Application.csproj|solutionrelative:gamehub.application\\tournament\\commands\\jointeam\\jointeamcommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{63D6388F-3E78-4B8F-B481-56518E18EF3C}|GameHub.Infrastructure\\GameHub.Infrastructure.csproj|c:\\users\\tomcz\\source\\repos\\gamehub.mvc\\gamehub.infrastructure\\repositories\\tournamentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{63D6388F-3E78-4B8F-B481-56518E18EF3C}|GameHub.Infrastructure\\GameHub.Infrastructure.csproj|solutionrelative:gamehub.infrastructure\\repositories\\tournamentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{974F26A4-F8E6-40AC-99FC-DEFF5655A810}|GameHub.Application\\GameHub.Application.csproj|c:\\users\\tomcz\\source\\repos\\gamehub.mvc\\gamehub.application\\tournament\\commands\\editscore\\editscorecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{974F26A4-F8E6-40AC-99FC-DEFF5655A810}|GameHub.Application\\GameHub.Application.csproj|solutionrelative:gamehub.application\\tournament\\commands\\editscore\\editscorecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3801BDD9-C51F-4526-83F8-EE6689531948}|GameHub.Domain\\GameHub.Domain.csproj|c:\\users\\tomcz\\source\\repos\\gamehub.mvc\\gamehub.domain\\interfaces\\itournamentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3801BDD9-C51F-4526-83F8-EE6689531948}|GameHub.Domain\\GameHub.Domain.csproj|solutionrelative:gamehub.domain\\interfaces\\itournamentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{974F26A4-F8E6-40AC-99FC-DEFF5655A810}|GameHub.Application\\GameHub.Application.csproj|c:\\users\\tomcz\\source\\repos\\gamehub.mvc\\gamehub.application\\tournament\\commands\\editscore\\editscorecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{974F26A4-F8E6-40AC-99FC-DEFF5655A810}|GameHub.Application\\GameHub.Application.csproj|solutionrelative:gamehub.application\\tournament\\commands\\editscore\\editscorecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{974F26A4-F8E6-40AC-99FC-DEFF5655A810}|GameHub.Application\\GameHub.Application.csproj|c:\\users\\tomcz\\source\\repos\\gamehub.mvc\\gamehub.application\\tournament\\commands\\jointeam\\jointeamcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{974F26A4-F8E6-40AC-99FC-DEFF5655A810}|GameHub.Application\\GameHub.Application.csproj|solutionrelative:gamehub.application\\tournament\\commands\\jointeam\\jointeamcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{974F26A4-F8E6-40AC-99FC-DEFF5655A810}|GameHub.Application\\GameHub.Application.csproj|c:\\users\\tomcz\\source\\repos\\gamehub.mvc\\gamehub.application\\tournament\\commands\\jointeam\\jointeamcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{974F26A4-F8E6-40AC-99FC-DEFF5655A810}|GameHub.Application\\GameHub.Application.csproj|solutionrelative:gamehub.application\\tournament\\commands\\jointeam\\jointeamcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{974F26A4-F8E6-40AC-99FC-DEFF5655A810}|GameHub.Application\\GameHub.Application.csproj|c:\\users\\tomcz\\source\\repos\\gamehub.mvc\\gamehub.application\\tournament\\commands\\edittournament\\edittournamentcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -105,10 +125,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{AD4100A0-CD99-4694-B5E2-FD8142B21CDE}|GameHub.MVC\\GameHub.MVC.csproj|c:\\users\\tomcz\\source\\repos\\gamehub.mvc\\gamehub.mvc\\models\\editscoreviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AD4100A0-CD99-4694-B5E2-FD8142B21CDE}|GameHub.MVC\\GameHub.MVC.csproj|solutionrelative:gamehub.mvc\\models\\editscoreviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3801BDD9-C51F-4526-83F8-EE6689531948}|GameHub.Domain\\GameHub.Domain.csproj|c:\\users\\tomcz\\source\\repos\\gamehub.mvc\\gamehub.domain\\entities\\team.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3801BDD9-C51F-4526-83F8-EE6689531948}|GameHub.Domain\\GameHub.Domain.csproj|solutionrelative:gamehub.domain\\entities\\team.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AD4100A0-CD99-4694-B5E2-FD8142B21CDE}|GameHub.MVC\\GameHub.MVC.csproj|c:\\users\\tomcz\\source\\repos\\gamehub.mvc\\gamehub.mvc\\models\\tournamentdetailsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -159,10 +175,6 @@
       "RelativeMoniker": "D:0:0:{974F26A4-F8E6-40AC-99FC-DEFF5655A810}|GameHub.Application\\GameHub.Application.csproj|solutionrelative:gamehub.application\\tournament\\queries\\getalltournamentmatches\\getalltournamentmatchesqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{974F26A4-F8E6-40AC-99FC-DEFF5655A810}|GameHub.Application\\GameHub.Application.csproj|c:\\users\\tomcz\\source\\repos\\gamehub.mvc\\gamehub.application\\tournament\\commands\\createtournament\\createtournamentcommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{974F26A4-F8E6-40AC-99FC-DEFF5655A810}|GameHub.Application\\GameHub.Application.csproj|solutionrelative:gamehub.application\\tournament\\commands\\createtournament\\createtournamentcommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{974F26A4-F8E6-40AC-99FC-DEFF5655A810}|GameHub.Application\\GameHub.Application.csproj|c:\\users\\tomcz\\source\\repos\\gamehub.mvc\\gamehub.application\\tournament\\queries\\getalltournamentteams\\getalltournamentteamsqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{974F26A4-F8E6-40AC-99FC-DEFF5655A810}|GameHub.Application\\GameHub.Application.csproj|solutionrelative:gamehub.application\\tournament\\queries\\getalltournamentteams\\getalltournamentteamsqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -187,24 +199,12 @@
       "RelativeMoniker": "D:0:0:{974F26A4-F8E6-40AC-99FC-DEFF5655A810}|GameHub.Application\\GameHub.Application.csproj|solutionrelative:gamehub.application\\tournament\\queries\\getalltournamentteams\\getalltournamentteamsquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AD4100A0-CD99-4694-B5E2-FD8142B21CDE}|GameHub.MVC\\GameHub.MVC.csproj|c:\\users\\tomcz\\source\\repos\\gamehub.mvc\\gamehub.mvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{AD4100A0-CD99-4694-B5E2-FD8142B21CDE}|GameHub.MVC\\GameHub.MVC.csproj|solutionrelative:gamehub.mvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3801BDD9-C51F-4526-83F8-EE6689531948}|GameHub.Domain\\GameHub.Domain.csproj|c:\\users\\tomcz\\source\\repos\\gamehub.mvc\\gamehub.domain\\entities\\round.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3801BDD9-C51F-4526-83F8-EE6689531948}|GameHub.Domain\\GameHub.Domain.csproj|solutionrelative:gamehub.domain\\entities\\round.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3801BDD9-C51F-4526-83F8-EE6689531948}|GameHub.Domain\\GameHub.Domain.csproj|c:\\users\\tomcz\\source\\repos\\gamehub.mvc\\gamehub.domain\\entities\\teammember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3801BDD9-C51F-4526-83F8-EE6689531948}|GameHub.Domain\\GameHub.Domain.csproj|solutionrelative:gamehub.domain\\entities\\teammember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3801BDD9-C51F-4526-83F8-EE6689531948}|GameHub.Domain\\GameHub.Domain.csproj|c:\\users\\tomcz\\source\\repos\\gamehub.mvc\\gamehub.domain\\entities\\tournamentgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3801BDD9-C51F-4526-83F8-EE6689531948}|GameHub.Domain\\GameHub.Domain.csproj|solutionrelative:gamehub.domain\\entities\\tournamentgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{974F26A4-F8E6-40AC-99FC-DEFF5655A810}|GameHub.Application\\GameHub.Application.csproj|c:\\users\\tomcz\\source\\repos\\gamehub.mvc\\gamehub.application\\tournament\\teamdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{974F26A4-F8E6-40AC-99FC-DEFF5655A810}|GameHub.Application\\GameHub.Application.csproj|solutionrelative:gamehub.application\\tournament\\teamdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{974F26A4-F8E6-40AC-99FC-DEFF5655A810}|GameHub.Application\\GameHub.Application.csproj|c:\\users\\tomcz\\source\\repos\\gamehub.mvc\\gamehub.application\\tournament\\rounddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -349,10 +349,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{AD4100A0-CD99-4694-B5E2-FD8142B21CDE}|GameHub.MVC\\GameHub.MVC.csproj|c:\\users\\tomcz\\source\\repos\\gamehub.mvc\\gamehub.mvc\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AD4100A0-CD99-4694-B5E2-FD8142B21CDE}|GameHub.MVC\\GameHub.MVC.csproj|solutionrelative:gamehub.mvc\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD4100A0-CD99-4694-B5E2-FD8142B21CDE}|GameHub.MVC\\GameHub.MVC.csproj|c:\\users\\tomcz\\source\\repos\\gamehub.mvc\\gamehub.mvc\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{AD4100A0-CD99-4694-B5E2-FD8142B21CDE}|GameHub.MVC\\GameHub.MVC.csproj|solutionrelative:gamehub.mvc\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -362,113 +358,154 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "GameHub.MVC",
-              "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.MVC\\GameHub.MVC.csproj",
-              "RelativeDocumentMoniker": "GameHub.MVC\\GameHub.MVC.csproj",
-              "ToolTip": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.MVC\\GameHub.MVC.csproj",
-              "RelativeToolTip": "GameHub.MVC\\GameHub.MVC.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAABUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-03-15T15:36:45.244Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "20240315152656_Init.cs",
-              "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Infrastructure\\Migrations\\20240315152656_Init.cs",
-              "RelativeDocumentMoniker": "GameHub.Infrastructure\\Migrations\\20240315152656_Init.cs",
-              "ToolTip": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Infrastructure\\Migrations\\20240315152656_Init.cs",
-              "RelativeToolTip": "GameHub.Infrastructure\\Migrations\\20240315152656_Init.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 3,
+              "Title": "TournamentRepository.cs",
+              "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Infrastructure\\Repositories\\TournamentRepository.cs",
+              "RelativeDocumentMoniker": "GameHub.Infrastructure\\Repositories\\TournamentRepository.cs",
+              "ToolTip": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Infrastructure\\Repositories\\TournamentRepository.cs",
+              "RelativeToolTip": "GameHub.Infrastructure\\Repositories\\TournamentRepository.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAA8AAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-15T15:26:56.901Z",
+              "WhenOpened": "2024-02-17T19:10:32.85Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "ApplicationUser.cs",
-              "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Domain\\Entities\\ApplicationUser.cs",
-              "RelativeDocumentMoniker": "GameHub.Domain\\Entities\\ApplicationUser.cs",
-              "ToolTip": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Domain\\Entities\\ApplicationUser.cs",
-              "RelativeToolTip": "GameHub.Domain\\Entities\\ApplicationUser.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-15T13:50:23.591Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ServiceCollectionExtension.cs",
-              "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Infrastructure\\Extensions\\ServiceCollectionExtension.cs",
-              "RelativeDocumentMoniker": "GameHub.Infrastructure\\Extensions\\ServiceCollectionExtension.cs",
-              "ToolTip": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Infrastructure\\Extensions\\ServiceCollectionExtension.cs",
-              "RelativeToolTip": "GameHub.Infrastructure\\Extensions\\ServiceCollectionExtension.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAwBcAAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-23T13:06:42.273Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "_LoginPartial.cshtml",
-              "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.MVC\\Views\\Shared\\_LoginPartial.cshtml",
-              "RelativeDocumentMoniker": "GameHub.MVC\\Views\\Shared\\_LoginPartial.cshtml",
-              "ToolTip": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.MVC\\Views\\Shared\\_LoginPartial.cshtml",
-              "RelativeToolTip": "GameHub.MVC\\Views\\Shared\\_LoginPartial.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAFAAAA",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.MVC\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "GameHub.MVC\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.MVC\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "GameHub.MVC\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-02-22T15:00:58.677Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "GameHubDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Infrastructure\\Persistance\\GameHubDbContext.cs",
-              "RelativeDocumentMoniker": "GameHub.Infrastructure\\Persistance\\GameHubDbContext.cs",
-              "ToolTip": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Infrastructure\\Persistance\\GameHubDbContext.cs",
-              "RelativeToolTip": "GameHub.Infrastructure\\Persistance\\GameHubDbContext.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABcAAAAxAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-18T12:52:40.279Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Match.cs",
-              "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Domain\\Entities\\Match.cs",
-              "RelativeDocumentMoniker": "GameHub.Domain\\Entities\\Match.cs",
-              "ToolTip": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Domain\\Entities\\Match.cs",
-              "RelativeToolTip": "GameHub.Domain\\Entities\\Match.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAYwBkAAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-05T12:25:47.51Z",
+              "WhenOpened": "2024-02-17T19:47:30.126Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Tournament.cs",
-              "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Domain\\Entities\\Tournament.cs",
-              "RelativeDocumentMoniker": "GameHub.Domain\\Entities\\Tournament.cs",
-              "ToolTip": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Domain\\Entities\\Tournament.cs",
-              "RelativeToolTip": "GameHub.Domain\\Entities\\Tournament.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAqwCAAAABHAAAA",
+              "Title": "EditScoreCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Application\\Tournament\\Commands\\EditScore\\EditScoreCommandHandler.cs",
+              "RelativeDocumentMoniker": "GameHub.Application\\Tournament\\Commands\\EditScore\\EditScoreCommandHandler.cs",
+              "ToolTip": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Application\\Tournament\\Commands\\EditScore\\EditScoreCommandHandler.cs",
+              "RelativeToolTip": "GameHub.Application\\Tournament\\Commands\\EditScore\\EditScoreCommandHandler.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAACQAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-17T19:00:16.28Z",
+              "WhenOpened": "2024-03-12T14:34:17.305Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Bracket.cshtml",
+              "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.MVC\\Views\\Tournament\\Bracket.cshtml",
+              "RelativeDocumentMoniker": "GameHub.MVC\\Views\\Tournament\\Bracket.cshtml",
+              "ToolTip": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.MVC\\Views\\Tournament\\Bracket.cshtml",
+              "RelativeToolTip": "GameHub.MVC\\Views\\Tournament\\Bracket.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAACVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-11T13:23:15.967Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "JoinTeamCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Application\\Tournament\\Commands\\JoinTeam\\JoinTeamCommandHandler.cs",
+              "RelativeDocumentMoniker": "GameHub.Application\\Tournament\\Commands\\JoinTeam\\JoinTeamCommandHandler.cs",
+              "ToolTip": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Application\\Tournament\\Commands\\JoinTeam\\JoinTeamCommandHandler.cs",
+              "RelativeToolTip": "GameHub.Application\\Tournament\\Commands\\JoinTeam\\JoinTeamCommandHandler.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAhwCYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-07T14:18:28.833Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ITournamentRepository.cs",
+              "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Domain\\Interfaces\\ITournamentRepository.cs",
+              "RelativeDocumentMoniker": "GameHub.Domain\\Interfaces\\ITournamentRepository.cs",
+              "ToolTip": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Domain\\Interfaces\\ITournamentRepository.cs",
+              "RelativeToolTip": "GameHub.Domain\\Interfaces\\ITournamentRepository.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAA5wBoAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-17T19:10:25.113Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TeamMember.cs",
+              "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Domain\\Entities\\TeamMember.cs",
+              "RelativeDocumentMoniker": "GameHub.Domain\\Entities\\TeamMember.cs",
+              "ToolTip": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Domain\\Entities\\TeamMember.cs",
+              "RelativeToolTip": "GameHub.Domain\\Entities\\TeamMember.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-05T11:26:03.404Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Team.cs",
+              "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Domain\\Entities\\Team.cs",
+              "RelativeDocumentMoniker": "GameHub.Domain\\Entities\\Team.cs",
+              "ToolTip": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Domain\\Entities\\Team.cs",
+              "RelativeToolTip": "GameHub.Domain\\Entities\\Team.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAvwBEAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-05T11:14:22.904Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CreateTournamentCommandValidator.cs",
+              "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Application\\Tournament\\Commands\\CreateTournament\\CreateTournamentCommandValidator.cs",
+              "RelativeDocumentMoniker": "GameHub.Application\\Tournament\\Commands\\CreateTournament\\CreateTournamentCommandValidator.cs",
+              "ToolTip": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Application\\Tournament\\Commands\\CreateTournament\\CreateTournamentCommandValidator.cs",
+              "RelativeToolTip": "GameHub.Application\\Tournament\\Commands\\CreateTournament\\CreateTournamentCommandValidator.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAMwBcAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-18T13:35:56.803Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.MVC\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "GameHub.MVC\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.MVC\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "GameHub.MVC\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAACoAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-02-22T15:00:27.634Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "TeamDto.cs",
+              "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Application\\Tournament\\TeamDto.cs",
+              "RelativeDocumentMoniker": "GameHub.Application\\Tournament\\TeamDto.cs",
+              "ToolTip": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Application\\Tournament\\TeamDto.cs",
+              "RelativeToolTip": "GameHub.Application\\Tournament\\TeamDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwA0AAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-06T17:17:26.74Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
               "Title": "GameSelectModel.cs",
               "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Application\\Tournament\\GameSelectModel.cs",
               "RelativeDocumentMoniker": "GameHub.Application\\Tournament\\GameSelectModel.cs",
@@ -476,38 +513,138 @@
               "RelativeToolTip": "GameHub.Application\\Tournament\\GameSelectModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-18T12:34:07.553Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-02-18T12:34:07.553Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MatchDto.cs",
-              "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Application\\Tournament\\MatchDto.cs",
-              "RelativeDocumentMoniker": "GameHub.Application\\Tournament\\MatchDto.cs",
-              "ToolTip": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Application\\Tournament\\MatchDto.cs",
-              "RelativeToolTip": "GameHub.Application\\Tournament\\MatchDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAyAAAA",
+              "DocumentIndex": 13,
+              "Title": "Match.cs",
+              "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Domain\\Entities\\Match.cs",
+              "RelativeDocumentMoniker": "GameHub.Domain\\Entities\\Match.cs",
+              "ToolTip": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Domain\\Entities\\Match.cs",
+              "RelativeToolTip": "GameHub.Domain\\Entities\\Match.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAYwBUAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-06T17:14:00.049Z",
+              "WhenOpened": "2024-03-05T12:25:47.51Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 12,
               "Title": "TournamentDto.cs",
               "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Application\\Tournament\\TournamentDto.cs",
               "RelativeDocumentMoniker": "GameHub.Application\\Tournament\\TournamentDto.cs",
               "ToolTip": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Application\\Tournament\\TournamentDto.cs",
               "RelativeToolTip": "GameHub.Application\\Tournament\\TournamentDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAApAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-11T13:16:06.081Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Domain\\Entities\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "GameHub.Domain\\Entities\\ApplicationUser.cs",
+              "ToolTip": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Domain\\Entities\\ApplicationUser.cs",
+              "RelativeToolTip": "GameHub.Domain\\Entities\\ApplicationUser.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-15T13:50:23.591Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ArchiveTournaments.cshtml",
+              "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.MVC\\Views\\Home\\ArchiveTournaments.cshtml",
+              "RelativeDocumentMoniker": "GameHub.MVC\\Views\\Home\\ArchiveTournaments.cshtml",
+              "ToolTip": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.MVC\\Views\\Home\\ArchiveTournaments.cshtml",
+              "RelativeToolTip": "GameHub.MVC\\Views\\Home\\ArchiveTournaments.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-16T12:47:14.072Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.MVC\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "GameHub.MVC\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.MVC\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "GameHub.MVC\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAxwBkAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-17T19:25:23.47Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ServiceCollectionExtension.cs",
+              "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Infrastructure\\Extensions\\ServiceCollectionExtension.cs",
+              "RelativeDocumentMoniker": "GameHub.Infrastructure\\Extensions\\ServiceCollectionExtension.cs",
+              "ToolTip": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Infrastructure\\Extensions\\ServiceCollectionExtension.cs",
+              "RelativeToolTip": "GameHub.Infrastructure\\Extensions\\ServiceCollectionExtension.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAwBcAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-23T13:06:42.273Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 14,
+              "Title": "MatchDto.cs",
+              "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Application\\Tournament\\MatchDto.cs",
+              "RelativeDocumentMoniker": "GameHub.Application\\Tournament\\MatchDto.cs",
+              "ToolTip": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Application\\Tournament\\MatchDto.cs",
+              "RelativeToolTip": "GameHub.Application\\Tournament\\MatchDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-06T17:14:00.049Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Tournament.cs",
+              "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Domain\\Entities\\Tournament.cs",
+              "RelativeDocumentMoniker": "GameHub.Domain\\Entities\\Tournament.cs",
+              "ToolTip": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Domain\\Entities\\Tournament.cs",
+              "RelativeToolTip": "GameHub.Domain\\Entities\\Tournament.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAA6wCAAAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-17T19:00:16.28Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "GameHubDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Infrastructure\\Persistance\\GameHubDbContext.cs",
+              "RelativeDocumentMoniker": "GameHub.Infrastructure\\Persistance\\GameHubDbContext.cs",
+              "ToolTip": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Infrastructure\\Persistance\\GameHubDbContext.cs",
+              "RelativeToolTip": "GameHub.Infrastructure\\Persistance\\GameHubDbContext.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAIBJwBcAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-18T12:52:40.279Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "_LoginPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.MVC\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeDocumentMoniker": "GameHub.MVC\\Views\\Shared\\_LoginPartial.cshtml",
+              "ToolTip": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.MVC\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeToolTip": "GameHub.MVC\\Views\\Shared\\_LoginPartial.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-02-22T15:00:58.677Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
               "Title": "Notification.cs",
               "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.MVC\\Models\\Notification.cs",
               "RelativeDocumentMoniker": "GameHub.MVC\\Models\\Notification.cs",
@@ -519,43 +656,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "EditScoreCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Application\\Tournament\\Commands\\EditScore\\EditScoreCommandHandler.cs",
-              "RelativeDocumentMoniker": "GameHub.Application\\Tournament\\Commands\\EditScore\\EditScoreCommandHandler.cs",
-              "ToolTip": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Application\\Tournament\\Commands\\EditScore\\EditScoreCommandHandler.cs",
-              "RelativeToolTip": "GameHub.Application\\Tournament\\Commands\\EditScore\\EditScoreCommandHandler.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAIBJwCQAAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-12T14:34:17.305Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "ITournamentRepository.cs",
-              "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Domain\\Interfaces\\ITournamentRepository.cs",
-              "RelativeDocumentMoniker": "GameHub.Domain\\Interfaces\\ITournamentRepository.cs",
-              "ToolTip": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Domain\\Interfaces\\ITournamentRepository.cs",
-              "RelativeToolTip": "GameHub.Domain\\Interfaces\\ITournamentRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAA5AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-17T19:10:25.113Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Bracket.cshtml",
-              "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.MVC\\Views\\Tournament\\Bracket.cshtml",
-              "RelativeDocumentMoniker": "GameHub.MVC\\Views\\Tournament\\Bracket.cshtml",
-              "ToolTip": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.MVC\\Views\\Tournament\\Bracket.cshtml",
-              "RelativeToolTip": "GameHub.MVC\\Views\\Tournament\\Bracket.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAA2AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-11T13:23:15.967Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 22,
               "Title": "TournamentController.cs",
               "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.MVC\\Controllers\\TournamentController.cs",
               "RelativeDocumentMoniker": "GameHub.MVC\\Controllers\\TournamentController.cs",
@@ -567,19 +668,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "TournamentRepository.cs",
-              "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Infrastructure\\Repositories\\TournamentRepository.cs",
-              "RelativeDocumentMoniker": "GameHub.Infrastructure\\Repositories\\TournamentRepository.cs",
-              "ToolTip": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Infrastructure\\Repositories\\TournamentRepository.cs",
-              "RelativeToolTip": "GameHub.Infrastructure\\Repositories\\TournamentRepository.cs",
-              "ViewState": "AQIAAKsAAAAAAAAAAAAgwCkAAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-17T19:10:32.85Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 24,
               "Title": "JoinTeamCommandValidator.cs",
               "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Application\\Tournament\\Commands\\JoinTeam\\JoinTeamCommandValidator.cs",
               "RelativeDocumentMoniker": "GameHub.Application\\Tournament\\Commands\\JoinTeam\\JoinTeamCommandValidator.cs",
@@ -591,19 +680,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.MVC\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "GameHub.MVC\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.MVC\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "GameHub.MVC\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-17T19:25:23.47Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 25,
               "Title": "EditScoreCommand.cs",
               "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Application\\Tournament\\Commands\\EditScore\\EditScoreCommand.cs",
               "RelativeDocumentMoniker": "GameHub.Application\\Tournament\\Commands\\EditScore\\EditScoreCommand.cs",
@@ -615,7 +692,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 26,
               "Title": "JoinTeamCommand.cs",
               "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Application\\Tournament\\Commands\\JoinTeam\\JoinTeamCommand.cs",
               "RelativeDocumentMoniker": "GameHub.Application\\Tournament\\Commands\\JoinTeam\\JoinTeamCommand.cs",
@@ -627,19 +704,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "JoinTeamCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Application\\Tournament\\Commands\\JoinTeam\\JoinTeamCommandHandler.cs",
-              "RelativeDocumentMoniker": "GameHub.Application\\Tournament\\Commands\\JoinTeam\\JoinTeamCommandHandler.cs",
-              "ToolTip": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Application\\Tournament\\Commands\\JoinTeam\\JoinTeamCommandHandler.cs",
-              "RelativeToolTip": "GameHub.Application\\Tournament\\Commands\\JoinTeam\\JoinTeamCommandHandler.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAhwCgAAABKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T14:18:28.833Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 27,
               "Title": "EditTournamentCommand.cs",
               "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Application\\Tournament\\Commands\\EditTournament\\EditTournamentCommand.cs",
               "RelativeDocumentMoniker": "GameHub.Application\\Tournament\\Commands\\EditTournament\\EditTournamentCommand.cs",
@@ -651,7 +716,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 28,
               "Title": "TournamentMappingProfile.cs",
               "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Application\\Mappings\\TournamentMappingProfile.cs",
               "RelativeDocumentMoniker": "GameHub.Application\\Mappings\\TournamentMappingProfile.cs",
@@ -663,7 +728,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 29,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.MVC\\Views\\Tournament\\Create.cshtml",
               "RelativeDocumentMoniker": "GameHub.MVC\\Views\\Tournament\\Create.cshtml",
@@ -675,19 +740,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "Team.cs",
-              "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Domain\\Entities\\Team.cs",
-              "RelativeDocumentMoniker": "GameHub.Domain\\Entities\\Team.cs",
-              "ToolTip": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Domain\\Entities\\Team.cs",
-              "RelativeToolTip": "GameHub.Domain\\Entities\\Team.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAvwBUAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-05T11:14:22.904Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 33,
               "Title": "CreateTournamentCommand.cs",
               "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Application\\Tournament\\Commands\\CreateTournament\\CreateTournamentCommand.cs",
               "RelativeDocumentMoniker": "GameHub.Application\\Tournament\\Commands\\CreateTournament\\CreateTournamentCommand.cs",
@@ -699,7 +752,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 30,
               "Title": "EditScoreViewModel.cs",
               "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.MVC\\Models\\EditScoreViewModel.cs",
               "RelativeDocumentMoniker": "GameHub.MVC\\Models\\EditScoreViewModel.cs",
@@ -711,7 +764,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 31,
               "Title": "TournamentDetailsViewModel.cs",
               "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.MVC\\Models\\TournamentDetailsViewModel.cs",
               "RelativeDocumentMoniker": "GameHub.MVC\\Models\\TournamentDetailsViewModel.cs",
@@ -723,7 +776,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 32,
               "Title": "CreateTournamentCommandHandler.cs",
               "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Application\\Tournament\\Commands\\CreateTournament\\CreateTournamentCommandHandler.cs",
               "RelativeDocumentMoniker": "GameHub.Application\\Tournament\\Commands\\CreateTournament\\CreateTournamentCommandHandler.cs",
@@ -735,19 +788,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 34,
               "Title": "EditTournamentCommandHandler.cs",
               "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Application\\Tournament\\Commands\\EditTournament\\EditTournamentCommandHandler.cs",
               "RelativeDocumentMoniker": "GameHub.Application\\Tournament\\Commands\\EditTournament\\EditTournamentCommandHandler.cs",
               "ToolTip": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Application\\Tournament\\Commands\\EditTournament\\EditTournamentCommandHandler.cs",
               "RelativeToolTip": "GameHub.Application\\Tournament\\Commands\\EditTournament\\EditTournamentCommandHandler.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAABQwCQAAAAMAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAqwCQAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-17T19:43:00.424Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 35,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.MVC\\Views\\Tournament\\Edit.cshtml",
               "RelativeDocumentMoniker": "GameHub.MVC\\Views\\Tournament\\Edit.cshtml",
@@ -759,7 +812,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 36,
               "Title": "_ValidationScriptsPartial.cshtml",
               "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.MVC\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
               "RelativeDocumentMoniker": "GameHub.MVC\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
@@ -771,7 +824,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 37,
               "Title": "EditTournamentCommandHandlerValidator.cs",
               "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Application\\Tournament\\Commands\\EditTournament\\EditTournamentCommandHandlerValidator.cs",
               "RelativeDocumentMoniker": "GameHub.Application\\Tournament\\Commands\\EditTournament\\EditTournamentCommandHandlerValidator.cs",
@@ -783,7 +836,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 38,
               "Title": "EditScoreCommandValidator.cs",
               "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Application\\Tournament\\Commands\\EditScore\\EditScoreCommandValidator.cs",
               "RelativeDocumentMoniker": "GameHub.Application\\Tournament\\Commands\\EditScore\\EditScoreCommandValidator.cs",
@@ -795,7 +848,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 39,
               "Title": "AddParticipantCommand.cs",
               "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Application\\Tournament\\Commands\\AddParticipant\\AddParticipantCommand.cs",
               "RelativeDocumentMoniker": "GameHub.Application\\Tournament\\Commands\\AddParticipant\\AddParticipantCommand.cs",
@@ -807,7 +860,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 40,
               "Title": "AddParticipantCommandHandler.cs",
               "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Application\\Tournament\\Commands\\AddParticipant\\AddParticipantCommandHandler.cs",
               "RelativeDocumentMoniker": "GameHub.Application\\Tournament\\Commands\\AddParticipant\\AddParticipantCommandHandler.cs",
@@ -819,31 +872,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "CreateTournamentCommandValidator.cs",
-              "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Application\\Tournament\\Commands\\CreateTournament\\CreateTournamentCommandValidator.cs",
-              "RelativeDocumentMoniker": "GameHub.Application\\Tournament\\Commands\\CreateTournament\\CreateTournamentCommandValidator.cs",
-              "ToolTip": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Application\\Tournament\\Commands\\CreateTournament\\CreateTournamentCommandValidator.cs",
-              "RelativeToolTip": "GameHub.Application\\Tournament\\Commands\\CreateTournament\\CreateTournamentCommandValidator.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAABUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-18T13:35:56.803Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 41,
               "Title": "site.css",
               "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.MVC\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "GameHub.MVC\\wwwroot\\css\\site.css",
               "ToolTip": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.MVC\\wwwroot\\css\\site.css",
               "RelativeToolTip": "GameHub.MVC\\wwwroot\\css\\site.css",
-              "ViewState": "AQIAAAwAAAAAAAAAAIBJwC8AAAAeAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAIBZwC8AAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2024-03-11T14:03:02.046Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 43,
               "Title": "GetAllTournamentTeamsQueryHandler.cs",
               "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Application\\Tournament\\Queries\\GetAllTournamentTeams\\GetAllTournamentTeamsQueryHandler.cs",
               "RelativeDocumentMoniker": "GameHub.Application\\Tournament\\Queries\\GetAllTournamentTeams\\GetAllTournamentTeamsQueryHandler.cs",
@@ -855,7 +896,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 42,
               "Title": "GetAllTournamentMatchesQueryHandler.cs",
               "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Application\\Tournament\\Queries\\GetAllTournamentMatches\\GetAllTournamentMatchesQueryHandler.cs",
               "RelativeDocumentMoniker": "GameHub.Application\\Tournament\\Queries\\GetAllTournamentMatches\\GetAllTournamentMatchesQueryHandler.cs",
@@ -867,7 +908,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 44,
               "Title": "GetAllTeamMembersQueryHandler.cs",
               "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Application\\Tournament\\Queries\\GetAllTeamMembers\\GetAllTeamMembersQueryHandler.cs",
               "RelativeDocumentMoniker": "GameHub.Application\\Tournament\\Queries\\GetAllTeamMembers\\GetAllTeamMembersQueryHandler.cs",
@@ -879,7 +920,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 45,
               "Title": "GetAllTournamentParticipantsQueryHandler.cs",
               "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Application\\Tournament\\Queries\\GetAllTournamentParticipants\\GetAllTournamentParticipantsQueryHandler.cs",
               "RelativeDocumentMoniker": "GameHub.Application\\Tournament\\Queries\\GetAllTournamentParticipants\\GetAllTournamentParticipantsQueryHandler.cs",
@@ -891,7 +932,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 46,
               "Title": "GetAllTournamentsQueryHandler.cs",
               "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Application\\Tournament\\Queries\\GetAllTournaments\\GetAllTournamentsQueryHandler.cs",
               "RelativeDocumentMoniker": "GameHub.Application\\Tournament\\Queries\\GetAllTournaments\\GetAllTournamentsQueryHandler.cs",
@@ -903,7 +944,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 47,
               "Title": "GetAllTournamentMatchesQuery.cs",
               "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Application\\Tournament\\Queries\\GetAllTournamentMatches\\GetAllTournamentMatchesQuery.cs",
               "RelativeDocumentMoniker": "GameHub.Application\\Tournament\\Queries\\GetAllTournamentMatches\\GetAllTournamentMatchesQuery.cs",
@@ -915,7 +956,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 48,
               "Title": "GetAllTournamentTeamsQuery.cs",
               "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Application\\Tournament\\Queries\\GetAllTournamentTeams\\GetAllTournamentTeamsQuery.cs",
               "RelativeDocumentMoniker": "GameHub.Application\\Tournament\\Queries\\GetAllTournamentTeams\\GetAllTournamentTeamsQuery.cs",
@@ -927,7 +968,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 49,
               "Title": "Round.cs",
               "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Domain\\Entities\\Round.cs",
               "RelativeDocumentMoniker": "GameHub.Domain\\Entities\\Round.cs",
@@ -939,31 +980,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.MVC\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "GameHub.MVC\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.MVC\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "GameHub.MVC\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAAkAAAAAAAAAAIBJwEgAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-02-22T15:00:27.634Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "TeamMember.cs",
-              "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Domain\\Entities\\TeamMember.cs",
-              "RelativeDocumentMoniker": "GameHub.Domain\\Entities\\TeamMember.cs",
-              "ToolTip": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Domain\\Entities\\TeamMember.cs",
-              "RelativeToolTip": "GameHub.Domain\\Entities\\TeamMember.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-05T11:26:03.404Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 50,
               "Title": "TournamentGame.cs",
               "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Domain\\Entities\\TournamentGame.cs",
               "RelativeDocumentMoniker": "GameHub.Domain\\Entities\\TournamentGame.cs",
@@ -984,18 +1001,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-06T17:18:16.592Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 50,
-              "Title": "TeamDto.cs",
-              "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Application\\Tournament\\TeamDto.cs",
-              "RelativeDocumentMoniker": "GameHub.Application\\Tournament\\TeamDto.cs",
-              "ToolTip": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Application\\Tournament\\TeamDto.cs",
-              "RelativeToolTip": "GameHub.Application\\Tournament\\TeamDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwA0AAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-06T17:17:26.74Z"
             },
             {
               "$type": "Document",
@@ -1314,7 +1319,7 @@
               "RelativeDocumentMoniker": "GameHub.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
               "ToolTip": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
               "RelativeToolTip": "GameHub.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
-              "ViewState": "AQIAAIEAAAAAAAAAAIBJwAAAAAAAAAAA",
+              "ViewState": "AQIAAH8AAAAAAAAAAEBVwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2024-02-22T15:01:52.154Z"
             },
@@ -1398,7 +1403,7 @@
               "RelativeDocumentMoniker": "GameHub.Application\\Tournament\\Queries\\GetAllGames\\GetAllGamesQueryHandler.cs",
               "ToolTip": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.Application\\Tournament\\Queries\\GetAllGames\\GetAllGamesQueryHandler.cs",
               "RelativeToolTip": "GameHub.Application\\Tournament\\Queries\\GetAllGames\\GetAllGamesQueryHandler.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAIBJwCQAAAAwAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAIBZwCQAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-17T19:27:01.721Z"
             },
@@ -1413,18 +1418,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-20T14:40:35.836Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 87,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.MVC\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "GameHub.MVC\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.MVC\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "GameHub.MVC\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-02-17T19:47:30.126Z"
             }
           ]
         }

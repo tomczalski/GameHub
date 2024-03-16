@@ -13,3 +13,4 @@ C:\Users\tomcz\source\repos\GameHub.MVC\GameHub.Application\obj\Debug\net7.0\Gam
 C:\Users\tomcz\source\repos\GameHub.MVC\GameHub.Application\obj\Debug\net7.0\refint\GameHub.Application.dll
 C:\Users\tomcz\source\repos\GameHub.MVC\GameHub.Application\obj\Debug\net7.0\GameHub.Application.pdb
 C:\Users\tomcz\source\repos\GameHub.MVC\GameHub.Application\obj\Debug\net7.0\ref\GameHub.Application.dll
+C:\Users\tomcz\source\repos\GameHub.MVC\GameHub.Application\obj\Debug\net7.0\GameHub.Application.sourcelink.json
