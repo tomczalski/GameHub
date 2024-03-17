@@ -18,7 +18,6 @@ namespace GameHub.Domain.Entities
         public Tournament Tournament { get; set; }
         public ICollection<TeamMember>? TeamMembers { get; set; }
 
-
         public Team()
         {
             Name = "Team " + _teamNumber++;

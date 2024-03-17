@@ -14,7 +14,8 @@
             <div class="card-body">
                 <h5 class="card-title">@item.Name</h5>
                 <h6 class="card-subtitle mb-2 text-muted">@item.Game.GameName</h6>
-                <p class="card-text">@item.StartDate</p>
+                <p class="card-text">@item.WinnerId</p>
+                <p class="card-text">@item.TournamentState</p>
                 <a class="btn btn-primary" asp-controller="Tournament" asp-action="Details" asp-route-encodedName="@item.EncodedName">Szczegóły</a>
             </div>
         </div>

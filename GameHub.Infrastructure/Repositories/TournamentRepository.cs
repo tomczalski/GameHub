@@ -137,7 +137,9 @@ namespace GameHub.Infrastructure.Repositories
 
             if (nextRound == null)
             {
-                tournament.TournamentState = TournamentState.Ended; 
+                tournament.TournamentState = TournamentState.Ended;
+                var winner = await _dbContext.Matches.Where(m => m.RoundId == lastRound.Id).FirstOrDefaultAsync();
+                tournament.WinnerId = winner.WinnerId;
                 await _dbContext.SaveChangesAsync();
                 return;
             }
@@ -173,11 +175,6 @@ namespace GameHub.Infrastructure.Repositories
                         Team2 = advancedTeams[i + 1]
                     };
                     _dbContext.Matches.Add(match);
-                }
-                if (tournament.TournamentState == TournamentState.Ended)
-                {
-                    var winner = await _dbContext.Matches.Where(m => m.RoundId == lastRound.Id).FirstOrDefaultAsync();
-                    tournament.WinnerId = winner.WinnerId;
                 }
                 await _dbContext.SaveChangesAsync();
             }  

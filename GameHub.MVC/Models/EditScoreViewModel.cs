@@ -8,5 +8,7 @@ namespace GameHub.MVC.Models
         public TournamentDto Tournament { get; set; }
         public List<MatchDto> Matches { get; set; }
         public MatchDto MatchForm { get; set; }
+        public RoundDto RoundForm { get; set; }
+        public List<TeamDto> Teams { get; set; }
     }
 }

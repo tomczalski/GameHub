@@ -36,8 +36,11 @@ namespace GameHub.Application.Tournament.Queries.GetAllTournamentMatches
                     {
                         Id = item.Id,
                         RoundId = item.RoundId,
+                        Round = item.Round,
                         Team1Id = item.Team1Id,
+                        Team1 = item.Team1,
                         Team2Id = item.Team2Id,
+                        Team2 = item.Team2,
                         Team1Score = item.Team1Score,
                         Team2Score = item.Team2Score,
                         WinnerId = item.WinnerId

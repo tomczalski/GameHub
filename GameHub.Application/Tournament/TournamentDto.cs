@@ -20,6 +20,7 @@ namespace GameHub.Application.Tournament
         public int NumberOfTeams { get; set; }
         public bool IsEditable { get; set; }
         public TournamentState TournamentState { get; set; }
+        public int MaxRounds { get; private set; }
         public int WinnerId { get; set; }
     }
 }

@@ -181,11 +181,11 @@ namespace GameHub.MVC.Controllers
             {
                 Tournament = tournamentDto,
                 Matches = matchesDto,
-                MatchForm = new MatchDto()
+                Teams = teamsDto,
+                MatchForm = new MatchDto(),
+                RoundForm = new RoundDto()
             };
-
-            
-            
+ 
             return View(model);
         }
 
@@ -195,16 +195,24 @@ namespace GameHub.MVC.Controllers
         {
             ModelState.Remove("Tournament");
             ModelState.Remove("Matches");
+            ModelState.Remove("Teams");
+            ModelState.Remove("RoundForm");
+            ModelState.Remove("MatchForm.Round");
+            ModelState.Remove("MatchForm.Team1");
+            ModelState.Remove("MatchForm.Team2");
             if (!ModelState.IsValid)
             {
                 var tournamentDto = await _mediator.Send(new GetTournamentByEncodedNameQuery(encodedName));
                 var matchesDto = await _mediator.Send(new GetAllTournamentMatchesQuery(encodedName));
+                var teamsDto = await _mediator.Send(new GetAllTournamentTeamsQuery(encodedName));
 
                 var model = new EditScoreViewModel
                 {
                     Tournament = tournamentDto,
                     Matches = matchesDto,
-                    MatchForm = new MatchDto()
+                    Teams = teamsDto,
+                    MatchForm = new MatchDto(),
+                    RoundForm = new RoundDto()
                 };
 
                 return View(model);

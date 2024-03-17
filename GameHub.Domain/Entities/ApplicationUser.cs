@@ -11,6 +11,5 @@ namespace GameHub.Domain.Entities
     {
         public string? Nickname { get; set; }
         public int Balance { get; set; }
-        public bool IsCaptain { get; set; }
     }
 }
