@@ -140,6 +140,11 @@ namespace GameHub.Infrastructure.Repositories
                 tournament.TournamentState = TournamentState.Ended;
                 var winner = await _dbContext.Matches.Where(m => m.RoundId == lastRound.Id).FirstOrDefaultAsync();
                 tournament.WinnerId = winner.WinnerId;
+                var winners = await _dbContext.TeamMembers.Where(tm => tm.TeamId == winner.WinnerId).ToListAsync();
+                foreach (var user in winners)
+                {
+                    user.User.Balance += tournament.Prize;
+                }
                 await _dbContext.SaveChangesAsync();
                 return;
             }
@@ -180,6 +185,10 @@ namespace GameHub.Infrastructure.Repositories
             }  
         }
 
+        public async Task<ApplicationUser> SetBalance(string userId) 
+        {
+            var user = await _dbContext.
+        }
         public async Task<IEnumerable<Tournament>> GetAll() => await _dbContext.Tournaments.Include(x => x.Game).ToListAsync();
         public async Task<IEnumerable<TournamentGame>> GetAllGames() => await _dbContext.TournamentGames.ToListAsync();
         public async Task<Tournament> GetByEncodedName(string encodedName) => await _dbContext.Tournaments.Include(x => x.Game).FirstAsync(c => c.EncodedName == encodedName);

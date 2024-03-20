@@ -35,7 +35,8 @@ namespace GameHub.Application.Tournament.Commands.JoinTeam
 
             teamMember.UserId = user.Id;
             teamMember.TeamId = request.TournamentTeamId;
-            teamMember.Username = user.Email;
+            teamMember.Username = user.Nickname;
+            
 
             await _tournamentRepository.JoinTeam(teamMember);
             await _tournamentRepository.UpdateTournamentState(tournament);

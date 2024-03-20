@@ -39,8 +39,9 @@ namespace GameHub.Application.ApplicationUser
 
             var id = user.FindFirst(c => c.Type == ClaimTypes.NameIdentifier)!.Value;
             var email = user.FindFirst(c => c.Type == ClaimTypes.Email)!.Value;
+            var nickname = user.FindFirst(c => c.Type == ClaimTypes.Name)?.Value;
 
-            return new CurrentUser(id, email);
+            return new CurrentUser(id, email, nickname);
 
         }
         public HttpContext GetHttpContext()

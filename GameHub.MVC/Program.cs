@@ -1,8 +1,17 @@
 using GameHub.Application.Extensions;
 using GameHub.Infrastructure.Extensions;
 using Microsoft.AspNetCore.Routing.Constraints;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using GameHub.Infrastructure.Persistance;
+using GameHub.Domain.Entities;
 
 var builder = WebApplication.CreateBuilder(args);
+var connectionString = builder.Configuration.GetConnectionString("GameHubDbContextConnection") ?? throw new InvalidOperationException("Connection string 'GameHubDbContextConnection' not found.");
+
+builder.Services.AddDbContext<GameHubDbContext>(options => options.UseSqlServer(connectionString));
+
+builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = false).AddEntityFrameworkStores<GameHubDbContext>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();

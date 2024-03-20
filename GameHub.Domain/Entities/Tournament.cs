@@ -21,7 +21,7 @@ namespace GameHub.Domain.Entities
         public TournamentGame Game { get; set; }
         public string? Description { get; set; }
         public DateTime StartDate { get; set; }
-        public string? Prize { get; set; }
+        public int Prize { get; set; }
         public string EncodedName { get; private set; } = default!;
         public int NumberOfTeams { get; set; }
         public int MaxRounds { get; private set; } = default!;

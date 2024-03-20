@@ -17,7 +17,7 @@ namespace GameHub.Infrastructure.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.12")
+                .HasAnnotation("ProductVersion", "7.0.17")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -42,9 +42,6 @@ namespace GameHub.Infrastructure.Migrations
                         .HasColumnType("nvarchar(256)");
 
                     b.Property<bool>("EmailConfirmed")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("IsCaptain")
                         .HasColumnType("bit");
 
                     b.Property<bool>("LockoutEnabled")
@@ -248,8 +245,8 @@ namespace GameHub.Infrastructure.Migrations
                     b.Property<int>("NumberOfTeams")
                         .HasColumnType("int");
 
-                    b.Property<string>("Prize")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Prize")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("StartDate")
                         .HasColumnType("datetime2");

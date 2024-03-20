@@ -15,7 +15,7 @@ namespace GameHub.Application.Tournament
         public TournamentGame Game { get; set; } = new TournamentGame();
         public string? Description { get; set; }
         public DateTime StartDate { get; set; }
-        public string? Prize { get; set; }
+        public int Prize { get; set; }
         public string? EncodedName { get; set; }
         public int NumberOfTeams { get; set; }
         public bool IsEditable { get; set; }
