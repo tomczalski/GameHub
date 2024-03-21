@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,6 +27,8 @@ namespace GameHub.Domain.Entities
         public int NumberOfTeams { get; set; }
         public int MaxRounds { get; private set; } = default!;
         public int WinnerId { get; set; }
+
+        
 
 
         public string? CreatedById { get; set; }

@@ -31,26 +31,41 @@ namespace GameHub.Application.Tournament.Commands.JoinTeam
             var dto = _mapper.Map<TournamentDto>(tournament);
             var tournamentId = dto.Id;
 
-            var teamMember = MapToTornamentParticipant(request);
+            var tournamentParticipant = MapToTornamentParticipant(request);
+            var teamMember = MapToTeamMember(request);
 
             teamMember.UserId = user.Id;
             teamMember.TeamId = request.TournamentTeamId;
             teamMember.Username = user.Nickname;
-            
+
+            tournamentParticipant.UserId = user.Id;
+            tournamentParticipant.TournamentId = request.TournamentId;
+            tournamentParticipant.Username = user.Nickname;
 
             await _tournamentRepository.JoinTeam(teamMember);
+            await _tournamentRepository.AddParticipant(tournamentParticipant);
             await _tournamentRepository.UpdateTournamentState(tournament);
             await _tournamentRepository.GenerateScheudle(tournamentId);
             return Unit.Value;
         }
 
-        private Domain.Entities.TeamMember MapToTornamentParticipant(JoinTeamCommand request)
+        private Domain.Entities.TeamMember MapToTeamMember(JoinTeamCommand request)
         {
             var teamMember = new Domain.Entities.TeamMember()
             {
                 UserId = request.UserId,
                 Username = request.Username,
                 TeamId = request.TeamId 
+            };
+            return teamMember;
+        }
+        private Domain.Entities.TournamentParticipant MapToTornamentParticipant(JoinTeamCommand request)
+        {
+            var teamMember = new Domain.Entities.TournamentParticipant()
+            {
+                UserId = request.UserId,
+                Username = request.Username,
+                TournamentId = request.TournamentId
             };
             return teamMember;
         }

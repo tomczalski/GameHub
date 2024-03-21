@@ -6,6 +6,7 @@ using GameHub.Infrastructure.Persistance;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualBasic;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -141,9 +142,11 @@ namespace GameHub.Infrastructure.Repositories
                 var winner = await _dbContext.Matches.Where(m => m.RoundId == lastRound.Id).FirstOrDefaultAsync();
                 tournament.WinnerId = winner.WinnerId;
                 var winners = await _dbContext.TeamMembers.Where(tm => tm.TeamId == winner.WinnerId).ToListAsync();
-                foreach (var user in winners)
+
+                foreach (var winningTeamMember in winners)
                 {
-                    user.User.Balance += tournament.Prize;
+                    var user = await _dbContext.Users.Where(u => u.Id == winningTeamMember.UserId).FirstOrDefaultAsync();
+                    user.Balance += tournament.Prize;
                 }
                 await _dbContext.SaveChangesAsync();
                 return;
@@ -184,10 +187,28 @@ namespace GameHub.Infrastructure.Repositories
                 await _dbContext.SaveChangesAsync();
             }  
         }
-
-        public async Task<ApplicationUser> SetBalance(string userId) 
+        public async Task<IEnumerable<Tournament>> GetAllUserTournaments(string userId)
         {
-            var user = await _dbContext.
+            var tournamentIds = await _dbContext.TournamentParticipants.Where(u => u.UserId == userId).Select(tp => tp.TournamentId).ToListAsync();
+            var userTournaments = await _dbContext.Tournaments.Where(t => tournamentIds.Contains(t.Id)).ToListAsync();
+
+            return userTournaments;
+
+        }
+        public async Task<List<Tournament>> GetWonTournamentsForUserAsync(string userId)
+        {
+            var tournamentIds = await _dbContext.TournamentParticipants.Where(u => u.UserId == userId).Select(tp => tp.TournamentId).ToListAsync();
+            var userTournaments = await _dbContext.Tournaments.Where(t => tournamentIds.Contains(t.Id)).ToListAsync();
+            var teamIds = await _dbContext.TeamMembers
+                                   .Where(tm => tm.UserId == userId)
+                                   .Select(tm => tm.TeamId)
+                                   .ToListAsync();
+            var userTeams = await _dbContext.Teams.Where(team => teamIds.Contains(team.Id)).ToListAsync();
+            var wonTournamentIds = _dbContext.Tournaments
+         .Where(t => t.WinnerId != null).AsEnumerable().Where(t => userTeams.Any(ut => ut.Id == t.WinnerId)).Select(t => t.Id).ToList();
+            var wonTournaments = await _dbContext.Tournaments.Where(t => wonTournamentIds.Contains(t.Id)).ToListAsync();
+
+            return wonTournaments;
         }
         public async Task<IEnumerable<Tournament>> GetAll() => await _dbContext.Tournaments.Include(x => x.Game).ToListAsync();
         public async Task<IEnumerable<TournamentGame>> GetAllGames() => await _dbContext.TournamentGames.ToListAsync();

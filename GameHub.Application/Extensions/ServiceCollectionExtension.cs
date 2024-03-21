@@ -8,6 +8,7 @@ using GameHub.Application.Tournament.Commands.CreateTournament;
 using GameHub.Application.Tournament.Commands.JoinTeam;
 using GameHub.Application.Tournament.Commands.Tournament;
 using MediatR;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -35,6 +36,7 @@ namespace GameHub.Application.Extensions
             services.AddValidatorsFromAssemblyContaining<AddParticipantCommandValidator>().AddFluentValidationAutoValidation().AddFluentValidationClientsideAdapters();
             services.AddValidatorsFromAssemblyContaining<JoinTeamCommandValidator>().AddFluentValidationAutoValidation().AddFluentValidationClientsideAdapters();
             services.AddScoped<IUserContext, UserContext>();
+            services.AddScoped<IUserClaimsPrincipalFactory<Domain.Entities.ApplicationUser>, MyUserClaimsPrincipalFactory>();
         }
     }
 }

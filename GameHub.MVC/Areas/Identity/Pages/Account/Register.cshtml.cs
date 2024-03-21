@@ -100,6 +100,7 @@ namespace GameHub.MVC.Areas.Identity.Pages.Account
             public string ConfirmPassword { get; set; }
 
             [Required]
+            [StringLength(30)]
             [Display(Name = "Nickname")]
             public string Nickname { get; set; }
         }

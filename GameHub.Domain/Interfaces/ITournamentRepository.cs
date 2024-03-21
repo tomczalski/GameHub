@@ -15,7 +15,9 @@ namespace GameHub.Domain.Interfaces
         Task<IEnumerable<TournamentGame>> GetAllGames();
         Task<IEnumerable<TournamentParticipant>> GetAllParticipants();
         Task<IEnumerable<TeamMember>> GetAllTeamMembers();
+        Task<IEnumerable<Tournament>> GetAllUserTournaments(string userId);
         Task<IEnumerable<Match>> GetAllMatches();
+        Task<List<Tournament>> GetWonTournamentsForUserAsync(string userId);
         Task<Tournament>GetByEncodedName(string encodedName);
         Task<Match> GetMatchById(int matchId);
         Task Edit();

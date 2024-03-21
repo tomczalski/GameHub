@@ -1,0 +1,29 @@
+﻿@page
+@using GameHub.Domain.Entities;
+@model StatisticsModel
+@{
+    ViewData["Title"] = "Statystyki";
+    ViewData["ActivePage"] = ManageNavPages.Statistics;
+}
+
+<h3>@ViewData["Title"]</h3>
+
+@* Sekcja z informacjami o liczbie turniejów i ilości zwycięstw *@
+<div>
+    <p>Liczba turniejów: @(ViewData["TotalTournaments"])</p>
+    <p>Ilość zwycięstw: @(ViewData["TotalWonTournaments"])</p>
+</div>
+
+<hr /> <!-- Separator -->
+
+<h4>Historia turniejów:</h4>
+
+@foreach (var tournament in ViewData["UserTournaments"] as IEnumerable<Tournament>)
+{
+    <div style="border-radius: 5px; padding: 10px; margin-bottom: 10px; background-color: @(ViewData["WonTournaments"] != null && ((List<Tournament>)ViewData["WonTournaments"]).Any(t => t.Id == tournament.Id) ? "green" : "red")">
+        <a href="@Url.Action("Details", "Tournament", new { encodedName = tournament.EncodedName })">
+            <h3>@tournament.Name</h3>
+        </a>
+        <p>Data: @tournament.StartDate.ToShortDateString()</p>
+    </div>
+}

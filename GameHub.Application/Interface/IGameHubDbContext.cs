@@ -17,7 +17,7 @@ namespace GameHub.Application.Interface
         public DbSet<TeamMember> TeamMembers { get; set; }
         public DbSet<Match> Matches { get; set; }
         public DbSet<Round> Rounds { get; set; }
-
+        public DbSet<Domain.Entities.ApplicationUser> Users { get; set; }
         Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken());
     }
 }

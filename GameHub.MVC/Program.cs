@@ -13,6 +13,7 @@ builder.Services.AddDbContext<GameHubDbContext>(options => options.UseSqlServer(
 
 builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = false).AddEntityFrameworkStores<GameHubDbContext>();
 
+
 // Add services to the container.
 builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
 builder.Services.AddInfrastructure(builder.Configuration);
@@ -40,5 +41,9 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+app.MapControllerRoute(
+        name: "tournamentDetails",
+        pattern: "Tournament/{encodedName}/Details",
+        defaults: new { controller = "Tournament", action = "Details" });
 app.MapRazorPages();
 app.Run();

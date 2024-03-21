@@ -23,6 +23,7 @@ namespace GameHub.Infrastructure.Persistance
         public DbSet<TeamMember> TeamMembers { get; set; }
         public DbSet<Match> Matches { get; set; }
         public DbSet<Round> Rounds { get; set; }
+        public DbSet<ApplicationUser> Users { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder builder)
