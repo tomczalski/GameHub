@@ -38,7 +38,7 @@ namespace GameHub.Application.Tournament.Commands.AddParticipant
             participant.TournamentId = tournamentId;
             participant.Username = user.Email;
 
-            
+            dto.Participants.Add(participant);
             await _tournamentRepository.AddParticipant(participant);
             return Unit.Value;
         }

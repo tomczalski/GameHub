@@ -1,8 +1,12 @@
-﻿using GameHub.Application.Tournament.Queries.GetAllTournaments;
+﻿using GameHub.Application.Tournament.Queries.GetAllTournamentParticipants;
+using GameHub.Application.Tournament.Queries.GetAllTournaments;
+using GameHub.Application.Tournament.Queries.GetAllTournamentTeams;
+using GameHub.Application.Tournament.Queries.GetTournamentByEncodedName;
 using GameHub.MVC.Models;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using System.Drawing;
 
 namespace GameHub.MVC.Controllers
 {
@@ -17,10 +21,17 @@ namespace GameHub.MVC.Controllers
             _mediator = mediator;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string encodedName)
         {
-            var tournaments = await _mediator.Send(new GetAllTournamentsQuery());
-            return View(tournaments);
+            var tournamentDtos = await _mediator.Send(new GetAllTournamentsQuery());
+           // var tournamentDto = await _mediator.Send(new GetTournamentByEncodedNameQuery(encodedName));
+            var model = new IndexModel
+            {   
+                Tournaments = tournamentDtos,
+             //   Tournament = tournamentDto
+            };
+
+            return View(model);
         }
 
         public async Task<IActionResult> ArchiveTournaments()

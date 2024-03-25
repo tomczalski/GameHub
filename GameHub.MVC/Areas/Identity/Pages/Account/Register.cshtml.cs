@@ -120,6 +120,7 @@ namespace GameHub.MVC.Areas.Identity.Pages.Account
             {
                 var user = CreateUser();
                 user.Nickname = Input.Nickname;
+                user.Balance = 600;
 
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);

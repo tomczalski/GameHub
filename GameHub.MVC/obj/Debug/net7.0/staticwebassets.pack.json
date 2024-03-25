@@ -13,6 +13,18 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.MVC\\wwwroot\\jpgs\\checkstats.jpg",
+      "PackagePath": "staticwebassets\\jpgs\\checkstats.jpg"
+    },
+    {
+      "Id": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.MVC\\wwwroot\\jpgs\\compete.jpg",
+      "PackagePath": "staticwebassets\\jpgs\\compete.jpg"
+    },
+    {
+      "Id": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.MVC\\wwwroot\\jpgs\\create.jpg",
+      "PackagePath": "staticwebassets\\jpgs\\create.jpg"
+    },
+    {
       "Id": "C:\\Users\\tomcz\\source\\repos\\GameHub.MVC\\GameHub.MVC\\wwwroot\\jpgs\\logo.jpg",
       "PackagePath": "staticwebassets\\jpgs\\logo.jpg"
     },

@@ -190,7 +190,7 @@ namespace GameHub.Infrastructure.Repositories
         public async Task<IEnumerable<Tournament>> GetAllUserTournaments(string userId)
         {
             var tournamentIds = await _dbContext.TournamentParticipants.Where(u => u.UserId == userId).Select(tp => tp.TournamentId).ToListAsync();
-            var userTournaments = await _dbContext.Tournaments.Where(t => tournamentIds.Contains(t.Id)).ToListAsync();
+            var userTournaments = await _dbContext.Tournaments.Where(t => tournamentIds.Contains(t.Id) && t.TournamentState == TournamentState.Ended).ToListAsync();
 
             return userTournaments;
 

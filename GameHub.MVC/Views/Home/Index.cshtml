@@ -1,9 +1,39 @@
 ﻿@using GameHub.Domain.Entities
-@model IEnumerable<GameHub.Application.Tournament.TournamentDto>
+@model IndexModel;
 
 @{
     ViewData["Title"] = "Aktualne turnieje";
 }
+
+<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="5000">
+      <img src="~/jpgs/create.jpg" class="d-block w-100" alt="First slide">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Twórz turnieje</h5>
+            </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="5000">
+      <img src="~/jpgs/compete.jpg" class="d-block w-100" alt="Second slide">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Rywalizuj z innymi graczami</h5>
+            </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="5000">
+            <img src="~/jpgs/checkstats.jpg" class="d-block w-100" alt="Third slide"><div class="carousel-caption d-none d-md-block">
+                <h5>Sprawdzaj statystyki</h5>
+            </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
 
 <h1>Turnieje</h1>
 
@@ -11,13 +41,15 @@
     <a asp-controller="Tournament" asp-action="Create" class="btn btn-secondary">Dodaj nowy</a>
 </p>
 <div class="row">
-    @foreach (var item in Model.Where(t => t.TournamentState != TournamentState.Ended))
+    @foreach (var item in Model.Tournaments.Where(t => t.TournamentState != TournamentState.Ended))
     {
-        <div class="card m-3" style="width: 18rem;">           
+        <input asp-for="@Model.Tournament.EncodedName" type="hidden" value="@item.EncodedName" />
+        <div class="card m-4" style="width: 18rem;">           
             <div class="card-body">
                 <h5 class="card-title">@item.Name</h5>
                 <h6 class="card-subtitle mb-2 text-muted">@item.Game.GameName</h6>
-                <p class="card-text">@item.StartDate</p>
+                <p class="card-text">@item.StartDate.ToShortDateString()</p>
+                <p class="card-text">Liczba zapisanych graczy: @item.Participants.Count()</p>
                 <a class="btn btn-primary" asp-controller="Tournament" asp-action="Details" asp-route-encodedName="@item.EncodedName">Szczegóły</a>
                 @if (item.IsEditable)
                 {

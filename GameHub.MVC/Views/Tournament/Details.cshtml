@@ -10,50 +10,51 @@
     <div class="col-md-6">
         <input type="hidden" name="EncodedName" value="@Model.Tournament.EncodedName" />
         <hr />
-        <dl class="row">
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Tournament.Name)
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Tournament.Name)
-            </dd>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Tournament.Game)
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Tournament.Game.GameName)
-            </dd>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Tournament.Description)
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Tournament.Description)
-            </dd>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Tournament.StartDate)
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Tournament.StartDate)
-            </dd>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Tournament.Prize)
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Tournament.Prize)
-            </dd>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Tournament.EncodedName)
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Tournament.EncodedName)
-            </dd>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Tournament.NumberOfTeams)
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Tournament.NumberOfTeams)
-            </dd>
-        </dl>
+        <div class="container mt-4">
+            <dl class="row">
+                <dt class="col-sm-5">
+                    Nazwa turnieju
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Tournament.Name)
+                </dd>
+
+                <dt class="col-sm-5">
+                    Gra
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Tournament.Game.GameName)
+                </dd>
+
+                <dt class="col-sm-5">
+                    Opis
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Tournament.Description)
+                </dd>
+
+                <dt class="col-sm-5">
+                    Data rozpoczęcia
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Tournament.StartDate)
+                </dd>
+
+                <dt class="col-sm-5">
+                    Nagroda
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Tournament.Prize)
+                </dd>
+                <dt class="col-sm-5">
+                    Liczba drużyn
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Tournament.NumberOfTeams)
+                </dd>
+            </dl>
+        </div>
+
 
         <div>
             @if (Model.Tournament.IsEditable)

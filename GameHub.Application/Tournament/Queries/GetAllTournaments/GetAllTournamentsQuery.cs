@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace GameHub.Application.Tournament.Queries.GetAllTournaments
 {
-    public class GetAllTournamentsQuery : IRequest<IEnumerable<TournamentDto>>
+    public class GetAllTournamentsQuery : IRequest<List<TournamentDto>>
     {
     }
 }

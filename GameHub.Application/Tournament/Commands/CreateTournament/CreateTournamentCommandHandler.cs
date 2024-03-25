@@ -28,11 +28,11 @@ namespace GameHub.Application.Tournament.Commands.CreateTournament
         public async Task<Unit> Handle(CreateTournamentCommand request, CancellationToken cancellationToken)
         {
             var tournament = MapToTournament(request);
-
             tournament.CreatedById = _userContext.GetCurrentUser().Id;
 
             int tournamentId = await _tournamentRepository.Create(tournament);
             var game = await _tournamentRepository.GetGameById(tournament.GameId);
+            _userContext.GetCurrentUser().Balance -= tournament.Prize;
 
             for (int i = 0; i < tournament.NumberOfTeams; i++)
             {

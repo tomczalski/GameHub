@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace GameHub.Application.Tournament.Queries.GetAllTournaments
 {
-    public class GetAllTournamentsQueryHandler : IRequestHandler<GetAllTournamentsQuery, IEnumerable<TournamentDto>>
+    public class GetAllTournamentsQueryHandler : IRequestHandler<GetAllTournamentsQuery, List<TournamentDto>>
     {
         private readonly ITournamentRepository _tournamentRepository;
         private readonly IMapper _mapper;
@@ -19,10 +19,10 @@ namespace GameHub.Application.Tournament.Queries.GetAllTournaments
             _tournamentRepository = tournamentRepository;
             _mapper = mapper;
         }
-        public async Task<IEnumerable<TournamentDto>> Handle(GetAllTournamentsQuery request, CancellationToken cancellationToken)
+        public async Task<List<TournamentDto>> Handle(GetAllTournamentsQuery request, CancellationToken cancellationToken)
         {
             var tournaments = await _tournamentRepository.GetAll();
-            var dtos = _mapper.Map<IEnumerable<TournamentDto>>(tournaments);
+            var dtos = _mapper.Map<List<TournamentDto>>(tournaments);
 
             return dtos;
         }
