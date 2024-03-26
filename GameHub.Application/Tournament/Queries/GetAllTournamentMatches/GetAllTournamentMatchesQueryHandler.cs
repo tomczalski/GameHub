@@ -43,7 +43,8 @@ namespace GameHub.Application.Tournament.Queries.GetAllTournamentMatches
                         Team2 = item.Team2,
                         Team1Score = item.Team1Score,
                         Team2Score = item.Team2Score,
-                        WinnerId = item.WinnerId
+                        WinnerId = item.WinnerId,
+                        MatchState = item.MatchState,
                     };
 
                     matchesList.Add(match);
