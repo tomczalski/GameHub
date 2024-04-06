@@ -22,6 +22,7 @@ namespace GameHub.Application.Tournament
         public TournamentState TournamentState { get; set; }
         public int MaxRounds { get; private set; }
         public int WinnerId { get; set; }
+        public int MaxPlayers { get; private set; }
         public ICollection<TournamentParticipant>? Participants { get; set; }
     }
 }

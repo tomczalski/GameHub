@@ -39,14 +39,14 @@ namespace GameHub.Application.ApplicationUser
 
             var id = user.FindFirst(c => c.Type == ClaimTypes.NameIdentifier)!.Value;
             var email = user.FindFirst(c => c.Type == ClaimTypes.Email)!.Value;
-
+            var roles = user.Claims.Where(c => c.Type == ClaimTypes.Role).Select(c => c.Value);
             var nicknameClaim = user.FindFirst("nickname");
             var balanceClaim = user.FindFirst("balance");
 
             var nickname = nicknameClaim.Value;
             var balanceValue = int.TryParse(balanceClaim.Value, out var balance);
 
-            return new CurrentUser(id, email, nickname, balance);
+            return new CurrentUser(id, email, nickname, balance, roles);
 
         }
         public HttpContext GetHttpContext()

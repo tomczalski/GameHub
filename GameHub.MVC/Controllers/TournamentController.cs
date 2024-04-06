@@ -14,6 +14,7 @@ using GameHub.Application.Tournament.Queries.GetTournamentByEncodedName;
 using GameHub.Domain.Entities;
 using GameHub.MVC.Extensions;
 using GameHub.MVC.Models;
+using GameHub.MVC.Models.Bracket;
 using Humanizer;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
@@ -170,13 +171,89 @@ namespace GameHub.MVC.Controllers
             await _mediator.Send(command);
             return RedirectToAction(nameof(Index));
         }
+        private BracketViewModel MapMatchesToBracketViewModel(List<MatchDto> matchDtos, int maxRounds)
+        {
+            var barcketViewModel = new BracketViewModel() { Rounds = new List<BracketRoundViewModel>() };
+            var groupedMatch = matchDtos.OrderBy(x => x.RoundId).GroupBy(x => x.RoundId).ToList();
 
+            int maxMatchInRounds = (int)Math.Pow(2, maxRounds) / 2;
+            foreach (var round in groupedMatch)
+            {
+
+                BracketRoundViewModel bracketRoundViewModel = new BracketRoundViewModel() { BracketRoundMatches = new List<BracketRoundMatchViewModel>() };
+                foreach (var matchPair in round)
+                {
+                    var matchPairModel = new BracketRoundMatchViewModel()
+                    {
+                        Team1Name = matchPair.Team1.Name,
+                        Team1Score = matchPair.Team1Score,
+                        Team2Name = matchPair.Team2.Name,
+                        Team2Score = matchPair.Team2Score,
+                        IsVisible = true
+                    };
+                    bracketRoundViewModel.BracketRoundMatches.Add(matchPairModel);
+                }
+                while (bracketRoundViewModel.BracketRoundMatches.Count < maxMatchInRounds)
+                {
+                    var matchPairModel = new BracketRoundMatchViewModel()
+                    {
+                        Team1Name = "",
+                        Team1Score = 0,
+                        Team2Name = "",
+                        Team2Score = 0,
+                        IsVisible = false
+                    };
+                    bracketRoundViewModel.BracketRoundMatches.Add(matchPairModel);
+                }
+                barcketViewModel.Rounds.Add(bracketRoundViewModel);
+                maxMatchInRounds = maxMatchInRounds / 2;
+            }
+
+
+            if (maxRounds >= groupedMatch.Count)
+            {
+                for (int i = 1; i <= maxRounds; i++)
+                {
+                    BracketRoundViewModel bracketRoundViewModel = new BracketRoundViewModel() { BracketRoundMatches = new List<BracketRoundMatchViewModel>() };
+                    if (groupedMatch.Count < i)
+                    {
+                        int liczbaMeczy = (int)Math.Ceiling((double)maxRounds / i);
+                        for (int j = 0; j < liczbaMeczy; j++)
+                        {
+                            var matchPairModel = new BracketRoundMatchViewModel()
+                            {
+                                Team1Name = "",
+                                Team1Score = 0,
+                                Team2Name = "",
+                                Team2Score = 0,
+                                IsVisible = true
+                            };
+                            bracketRoundViewModel.BracketRoundMatches.Add(matchPairModel);
+                        }
+                        barcketViewModel.Rounds.Add(bracketRoundViewModel);
+                    }
+                }
+            }
+
+            return barcketViewModel;
+        }
         [Route("Tournament/{encodedName}/Bracket")]
         public async Task<IActionResult> Bracket(string encodedName)
         {
-            var teamsDto = await _mediator.Send(new GetAllTournamentTeamsQuery(encodedName));
             var matchesDto = await _mediator.Send(new GetAllTournamentMatchesQuery(encodedName));
             var tournamentDto = await _mediator.Send(new GetTournamentByEncodedNameQuery(encodedName));
+            var model = MapMatchesToBracketViewModel(matchesDto, tournamentDto.MaxRounds);
+            model.Tournament = tournamentDto;
+            return View(model);
+        }
+
+        [Route("Tournament/{encodedName}/EditScore")]
+        public async Task<IActionResult> EditScore(string encodedName)
+        {
+            var tournamentDto = await _mediator.Send(new GetTournamentByEncodedNameQuery(encodedName));
+            var matchesDto = await _mediator.Send(new GetAllTournamentMatchesQuery(encodedName));
+            var teamsDto = await _mediator.Send(new GetAllTournamentTeamsQuery(encodedName));
+
             var model = new EditScoreViewModel
             {
                 Tournament = tournamentDto,
@@ -185,13 +262,12 @@ namespace GameHub.MVC.Controllers
                 MatchForm = new MatchDto(),
                 RoundForm = new RoundDto()
             };
- 
+
             return View(model);
         }
-
         [HttpPost]
-        [Route("Tournament/{encodedName}/Bracket")]
-        public async Task<IActionResult> Bracket(EditScoreViewModel scoreModel, string encodedName, int tournamentId)
+        [Route("Tournament/{encodedName}/EditScore")]
+        public async Task<IActionResult> EditScore(EditScoreViewModel scoreModel, string encodedName, int tournamentId)
         {
             ModelState.Remove("Tournament");
             ModelState.Remove("Matches");
@@ -230,7 +306,7 @@ namespace GameHub.MVC.Controllers
 
             await _mediator.Send(command);
 
-            return RedirectToAction("Bracket", new { encodedName = encodedName });
+            return RedirectToAction("EditScore", new { encodedName = encodedName });
         }
 
     }

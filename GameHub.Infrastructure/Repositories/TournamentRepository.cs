@@ -169,7 +169,8 @@ namespace GameHub.Infrastructure.Repositories
                         Team2 = advancedTeam,
                         Team1Score = 3,
                         Team2Score = 0,
-                        WinnerId = advancedTeam.Id
+                        WinnerId = advancedTeam.Id,
+                        MatchState = MatchState.Ended
                     };
                     _dbContext.Matches.Add(advancedMatch);
                 }
@@ -210,7 +211,8 @@ namespace GameHub.Infrastructure.Repositories
 
             return wonTournaments;
         }
-        public async Task<IEnumerable<Tournament>> GetAll() => await _dbContext.Tournaments.Include(x => x.Game).ToListAsync();
+        public async Task<IEnumerable<Tournament>> GetAll() => await _dbContext.Tournaments.Include(x => x.Game).Include(t => t.Participants).ToListAsync();
+        public async Task<IEnumerable<Tournament>> GetByGame(int gameId) => await _dbContext.Tournaments.Include(x => x.Game).Where(t => t.GameId == gameId).ToListAsync();
         public async Task<IEnumerable<TournamentGame>> GetAllGames() => await _dbContext.TournamentGames.ToListAsync();
         public async Task<Tournament> GetByEncodedName(string encodedName) => await _dbContext.Tournaments.Include(x => x.Game).FirstAsync(c => c.EncodedName == encodedName);
         public async Task<IEnumerable<TournamentParticipant>> GetAllParticipants() => await _dbContext.TournamentParticipants.ToArrayAsync();

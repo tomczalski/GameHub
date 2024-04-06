@@ -122,6 +122,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG91cm5hbWVudFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/tomcz/source/repos/GameHub.MVC/GameHub.MVC/Views/Tournament/EditScore.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG91cm5hbWVudFxFZGl0U2NvcmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/tomcz/source/repos/GameHub.MVC/GameHub.MVC/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

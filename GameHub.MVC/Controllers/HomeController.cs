@@ -1,7 +1,10 @@
-﻿using GameHub.Application.Tournament.Queries.GetAllTournamentParticipants;
+﻿using GameHub.Application.Tournament;
+using GameHub.Application.Tournament.Queries.GetAllGames;
+using GameHub.Application.Tournament.Queries.GetAllTournamentParticipants;
 using GameHub.Application.Tournament.Queries.GetAllTournaments;
 using GameHub.Application.Tournament.Queries.GetAllTournamentTeams;
 using GameHub.Application.Tournament.Queries.GetTournamentByEncodedName;
+using GameHub.Application.Tournament.Queries.GetTournamentByGame;
 using GameHub.MVC.Models;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -21,14 +24,24 @@ namespace GameHub.MVC.Controllers
             _mediator = mediator;
         }
 
-        public async Task<IActionResult> Index(string encodedName)
+        public async Task<IActionResult> Index(int? SelectedGameId)
         {
-            var tournamentDtos = await _mediator.Send(new GetAllTournamentsQuery());
-           // var tournamentDto = await _mediator.Send(new GetTournamentByEncodedNameQuery(encodedName));
+            List<TournamentDto> tournamentDtos;
+
+            if (SelectedGameId.HasValue)
+            {
+                tournamentDtos = await _mediator.Send(new GetTournamentByGameQuery(SelectedGameId.Value));
+            }
+            else
+            {
+                tournamentDtos = await _mediator.Send(new GetAllTournamentsQuery());
+            }
+            var games = await _mediator.Send(new GetAllGamesQuery());
             var model = new IndexModel
             {   
                 Tournaments = tournamentDtos,
-             //   Tournament = tournamentDto
+                SelectedGameId = SelectedGameId,
+                Games = games,
             };
 
             return View(model);

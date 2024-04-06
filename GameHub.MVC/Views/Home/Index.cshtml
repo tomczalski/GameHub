@@ -37,9 +37,14 @@
 
 <h1>Turnieje</h1>
 
-<p>
-    <a asp-controller="Tournament" asp-action="Create" class="btn btn-secondary">Dodaj nowy</a>
-</p>
+@using (Html.BeginForm("Index", "Home", FormMethod.Get))
+{
+    <select asp-for="SelectedGameId" asp-items="@(new SelectList(Model.Games, "Id", "GameName"))">
+        <option value="">Wybierz grę...</option>
+    </select>
+    <input type="submit" value="Filtruj" class="btn btn-primary" />
+}
+
 <div class="row">
     @foreach (var item in Model.Tournaments.Where(t => t.TournamentState != TournamentState.Ended))
     {
@@ -49,7 +54,7 @@
                 <h5 class="card-title">@item.Name</h5>
                 <h6 class="card-subtitle mb-2 text-muted">@item.Game.GameName</h6>
                 <p class="card-text">@item.StartDate.ToShortDateString()</p>
-                <p class="card-text">Liczba zapisanych graczy: @item.Participants.Count()</p>
+                <p class="card-text">Gracze: @item.Participants.Count()/@item.MaxPlayers</p>
                 <a class="btn btn-primary" asp-controller="Tournament" asp-action="Details" asp-route-encodedName="@item.EncodedName">Szczegóły</a>
                 @if (item.IsEditable)
                 {

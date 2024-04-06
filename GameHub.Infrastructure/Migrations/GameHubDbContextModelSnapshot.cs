@@ -235,6 +235,9 @@ namespace GameHub.Infrastructure.Migrations
                     b.Property<int>("GameId")
                         .HasColumnType("int");
 
+                    b.Property<int>("MaxPlayers")
+                        .HasColumnType("int");
+
                     b.Property<int>("MaxRounds")
                         .HasColumnType("int");
 

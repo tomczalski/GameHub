@@ -11,7 +11,7 @@ var connectionString = builder.Configuration.GetConnectionString("GameHubDbConte
 
 builder.Services.AddDbContext<GameHubDbContext>(options => options.UseSqlServer(connectionString));
 
-builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = false).AddEntityFrameworkStores<GameHubDbContext>();
+builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = false).AddRoles<IdentityRole>().AddEntityFrameworkStores<GameHubDbContext>();
 
 
 // Add services to the container.

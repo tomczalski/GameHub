@@ -1,0 +1,44 @@
+﻿@using GameHub.Domain.Entities;
+@model EditScoreViewModel;
+
+@{
+    ViewData["Title"] = "Bracket";
+}
+
+<h1>Mecze</h1>
+
+<div class="wrapper" style="display: grid; grid-template-columns: repeat(@Model.Tournament.MaxRounds, 1fr); gap: 20px;">
+        @for (int i = 1; i <= Model.Tournament.MaxRounds; i++)
+        {
+
+            var matchesForRound = Model.Matches.Where(m => m.Round.RoundNumber == i).ToList();
+            <div class="round">
+                <h2>Runda @i</h2>
+                <div class="matches">
+                    @foreach (var match in matchesForRound)
+                    {
+                        <div class="match">
+                        <form asp-controller="Tournament" asp-action="EditScore">
+                                <div class="team">
+                                    <div>@match.Team1.Name <input asp-for="@Model.MatchForm.Team1Score" type="text" value="@match.Team1Score" placeholder="Wynik: @match.Team1.Name" /></div>
+                                    <span>vs</span>
+                                    <div>@match.Team2.Name <input asp-for="@Model.MatchForm.Team2Score" type="text" value="@match.Team2Score" placeholder="Wynik: @match.Team2.Name" /></div>
+                                </div>
+                                <input asp-for="@Model.MatchForm.Id" type="hidden" value="@match.Id" />
+                                <input asp-for="@Model.MatchForm.Team1Id" type="hidden" value="@match.Team1Id" />
+                                <input asp-for="@Model.MatchForm.Team2Id" type="hidden" value="@match.Team2Id" />
+                                <input asp-for="@Model.MatchForm.Team2Id" type="hidden" value="@match.RoundId" />
+                                <input type="hidden" name="EncodedName" value="@Model.Tournament.EncodedName" />
+                                <input type="hidden" name="TournamentId" value="@Model.Tournament.Id" />
+                                @if (match.MatchState != MatchState.Ended)
+                                {
+                                    <button type="submit" class="btn btn-primary">Zapisz wynik</button>
+                                }
+                            </form>
+                        </div>
+                    }
+                </div>
+            </div>
+        }
+    <a href="@Url.Action("details", "Tournament", new { encodedName = Model.Tournament.EncodedName })" class="btn btn-secondary">Powrót</a>
+    </div> 

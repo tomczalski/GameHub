@@ -74,6 +74,10 @@
             @if (Model.Tournament.TournamentState != GameHub.Domain.Entities.TournamentState.Awaiting)
             {
                 <a class="btn btn-primary" asp-controller="Tournament" asp-action="Bracket" asp-route-encodedName="@Model.Tournament.EncodedName">Pokaż drabinkę</a>
+                @if (Model.Tournament.IsEditable && Model.Tournament.TournamentState != GameHub.Domain.Entities.TournamentState.Ended)
+                {
+                    <a class="btn btn-primary" asp-controller="Tournament" asp-action="EditScore" asp-route-encodedName="@Model.Tournament.EncodedName">Wprowadź wyniki meczy</a>
+                }
             }
             |
             <a asp-controller="Home" asp-action="Index">Powrót</a>

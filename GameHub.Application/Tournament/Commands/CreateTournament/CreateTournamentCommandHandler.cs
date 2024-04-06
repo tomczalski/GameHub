@@ -29,9 +29,10 @@ namespace GameHub.Application.Tournament.Commands.CreateTournament
         {
             var tournament = MapToTournament(request);
             tournament.CreatedById = _userContext.GetCurrentUser().Id;
-
-            int tournamentId = await _tournamentRepository.Create(tournament);
             var game = await _tournamentRepository.GetGameById(tournament.GameId);
+            tournament.CalculateMaxPlayers(game);
+            int tournamentId = await _tournamentRepository.Create(tournament);
+            
             _userContext.GetCurrentUser().Balance -= tournament.Prize;
 
             for (int i = 0; i < tournament.NumberOfTeams; i++)

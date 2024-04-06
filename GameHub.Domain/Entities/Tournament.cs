@@ -27,7 +27,7 @@ namespace GameHub.Domain.Entities
         public int NumberOfTeams { get; set; }
         public int MaxRounds { get; private set; } = default!;
         public int WinnerId { get; set; }
-
+        public int MaxPlayers { get; set; } = default!;
         
 
 
@@ -44,5 +44,11 @@ namespace GameHub.Domain.Entities
             int rounds = (int)Math.Ceiling(logBase2);
             MaxRounds = rounds;
         }
+
+        public void CalculateMaxPlayers(TournamentGame game) 
+        {
+            MaxPlayers = game.MaxPlayers * NumberOfTeams;
+        }
+
     }
 }
